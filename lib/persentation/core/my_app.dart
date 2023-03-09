@@ -78,70 +78,27 @@ class _MyAppState extends State<MyApp> {
           BlocProvider(
               create: (context) => getIt<LocalizationLoaderBloc>()
                 ..add(const LocalizationLoaderEvent.started(isRefresh: true))),
-          BlocProvider(
-              create: (context) =>
-                  getIt<AuthBloc>()..add(const AuthEvent.refreshToken())),
         ],
-        child: MaterialApp(
+        child: BlocBuilder<LocalizationLoaderBloc, LocalizationLoaderState>(
+            builder: (context, state) {
+          return MaterialApp.router(
+            debugShowCheckedModeBanner: false,
+            scaffoldMessengerKey: snackbarKey,
             title: 'Kilats',
-            home: Builder(builder: (BuildContext context) {
-              context.read<AuthBloc>().add(AuthEvent.updateTokenFirebase(
-                  pref.getString(vFirebaseToken) ?? ''));
-              Size size = MediaQuery.of(context).size;
-              return Scaffold(
-                backgroundColor: primaryColor,
-                body: SizedBox(
-                  width: size.width,
-                  height: size.height,
-                  child: AnimatedSplashScreen(
-                    duration: 5000,
-                    splashIconSize: size.height * 1.5,
-                    backgroundColor: transparent,
-                    splash: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          AnimatedSwitcherZoom.zoomOut(
-                            duration: const Duration(milliseconds: 2000),
-                            scaleOutFactor: 100,
-                            scaleInFactor: 200,
-                            child: zoomAnimated(_index, image, context),
-                          ),
-                          siboh32,
-                          _index == 0
-                              ? CurvedCircularProgressIndicator(
-                                  strokeWidth: 6,
-                                  animationDuration: const Duration(seconds: 2),
-                                  backgroundColor: Colors.white10,
-                                  color: Colors.white,
-                                )
-                              : SizedBox()
-                        ]),
-                    nextScreen: BlocBuilder<LocalizationLoaderBloc,
-                        LocalizationLoaderState>(builder: (context, state) {
-                      return MaterialApp.router(
-                        debugShowCheckedModeBanner: false,
-                        scaffoldMessengerKey: snackbarKey,
-                        title: 'Kilats',
-                        routerDelegate: AutoRouterDelegate(
-                          router,
-                          navigatorObservers: () => [MyObserver()],
-                        ),
-                        routeInformationParser: router.defaultRouteParser(),
-                        locale: Locale(state.located),
-                        localizationsDelegates: [
-                          GlobalMaterialLocalizations.delegate,
-                          GlobalWidgetsLocalizations.delegate,
-                          GlobalCupertinoLocalizations.delegate,
-                          AppLocalizations.delegate,
-                        ],
-                        supportedLocales: AppLocalizations.supportedLocales,
-                      );
-                    }),
-                    splashTransition: SplashTransition.fadeTransition,
-                    pageTransitionType: PageTransitionType.bottomToTop,
-                  ),
-                ),
-              );
-            })));
+            routerDelegate: AutoRouterDelegate(
+              router,
+              navigatorObservers: () => [MyObserver()],
+            ),
+            routeInformationParser: router.defaultRouteParser(),
+            locale: Locale(state.located),
+            localizationsDelegates: [
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
+              AppLocalizations.delegate,
+            ],
+            supportedLocales: AppLocalizations.supportedLocales,
+          );
+        }));
   }
 }
