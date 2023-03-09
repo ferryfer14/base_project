@@ -80,7 +80,7 @@ class _MyAppState extends State<MyApp> {
                 ..add(const LocalizationLoaderEvent.started(isRefresh: true))),
         ],
         child: BlocBuilder<LocalizationLoaderBloc, LocalizationLoaderState>(
-            builder: (context, state) {
+            builder: (context, state) { 
           return MaterialApp.router(
             debugShowCheckedModeBanner: false,
             scaffoldMessengerKey: snackbarKey,
