@@ -1,7 +1,4 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:standart_project/application/transaction_detail/transaction_detail_bloc.dart';
-import 'package:standart_project/injection.dart';
 import 'package:flutter/material.dart';
 import 'package:standart_project/persentation/core/utils/spacing/padding.dart';
 import 'package:standart_project/persentation/core/utils/styles/colors.dart';

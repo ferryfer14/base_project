@@ -15,6 +15,7 @@ import 'package:standart_project/routes/app_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../../env.dart';
+import '../../domain/auth/profile_model.dart';
 import 'components/card_user.dart';
 import 'components/change_language.dart';
 
@@ -32,44 +33,9 @@ class ProfilePage extends StatelessWidget {
         providers: [
           BlocProvider(
               create: (context) =>
-                  getIt<AuthBloc>()..add(const AuthEvent.authCheckRequested())),
-          BlocProvider(
-              create: (context) =>
                   getIt<ProfileBloc>()..add(const ProfileEvent.load()))
         ],
-        child: BlocConsumer<AuthBloc, AuthState>(listener: (context, state) {
-          state.maybeMap(
-            initial: (_) => null,
-            authenticated: (_) => null,
-            unauthenticated: (_) => null,
-            orElse: () => null,
-          );
-        }, builder: (context, state) {
-          return BlocListener<ProfileBloc, ProfileState>(
-            listener: (context, state) {
-              state.maybeMap(
-                  orElse: () => const SizedBox(),
-                  failure: (r) {
-                    r.whenOrNull(failure: (v) {
-                      if (v == AppException.unauthenticatedException()) {
-                        customSnackBar(
-                          context: context,
-                          color: redColor,
-                          duration: const Duration(milliseconds: 1000),
-                          content:
-                              Text(AppLocalizations.of(context)!.session_end),
-                        );
-                        context
-                            .read<AuthBloc>()
-                            .add(const AuthEvent.signedOut());
-                      } else if (v == AppException.badNetworkException()) {
-                        noInternet(context, () {}, 'profile');
-                      }
-                    });
-                  },
-                  success: (r) => null);
-            },
-            child: Scaffold(
+        child: Scaffold(
                 backgroundColor: white,
                 body: SingleChildScrollView(
                     child: Column(
@@ -104,16 +70,7 @@ class ProfilePage extends StatelessWidget {
                                   shape: RoundedRectangleBorder(
                                       borderRadius: borderRadius16),
                                   child: ClipPath(
-                                    child:
-                                        BlocBuilder<ProfileBloc, ProfileState>(
-                                            builder: (context, state) {
-                                      return state.maybeMap(
-                                          orElse: () => const SizedBox(),
-                                          success: (r) {
-                                            return CardUser(
-                                                profileModel: r.profileModel);
-                                          });
-                                    }),
+                                child: CardUser(),
                                     clipper: ShapeBorderClipper(
                                         shape: RoundedRectangleBorder(
                                             borderRadius: borderRadius16)),
@@ -251,8 +208,6 @@ class ProfilePage extends StatelessWidget {
                           ),
                         ],
                       ),
-                    ]))),
-          );
-        }));
+                ]))));
   }
 }

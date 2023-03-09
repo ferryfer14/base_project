@@ -39,15 +39,6 @@ class _$AppRouter extends RootStackRouter {
         barrierDismissible: false,
       );
     },
-    IntroRoute.name: (routeData) {
-      return CustomPage<dynamic>(
-        routeData: routeData,
-        child: const IntroPage(),
-        transitionsBuilder: TransitionsBuilders.slideLeft,
-        opaque: true,
-        barrierDismissible: false,
-      );
-    },
   };
 
   @override
@@ -59,10 +50,6 @@ class _$AppRouter extends RootStackRouter {
         RouteConfig(
           WebviewRoute.name,
           path: 'webview',
-        ),
-        RouteConfig(
-          IntroRoute.name,
-          path: 'intro',
         ),
       ];
 }
@@ -128,16 +115,4 @@ class WebviewRouteArgs {
   String toString() {
     return 'WebviewRouteArgs{key: $key, url: $url, title: $title}';
   }
-}
-
-/// generated route for
-/// [IntroPage]
-class IntroRoute extends PageRouteInfo<void> {
-  const IntroRoute()
-      : super(
-          IntroRoute.name,
-          path: 'intro',
-        );
-
-  static const String name = 'IntroRoute';
 }
