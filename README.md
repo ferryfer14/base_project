@@ -1,16 +1,31 @@
-# standart_project
+# Core Base Project
 
-A new Flutter project.
+This widget allows you to create a textfield that takes in Textfield values and display the values as tags. The tags can also be customized to your own preference. The widget also takes in a controller that can also be customized by extending it into your own custom controller and inheriting its functionalities.  
+
+## Environment
+
+`sdk: ">=2.12.0 <3.0.0"`
+
+`flutter: ">=1.17.0"`
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+android > local.properties
+```properties 
+    flutter.minSdkVersion=23
+    flutter.targetSdkVersion=33
+    flutter.compileSdkVersion=33
+```
 
-A few resources to get you started if this is your first Flutter project:
+Terminal
+```terminal 
+    flutter pub get
+    cd android && ./gradlew clean && ./gradlew build
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Visual Samples For Above Examples
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Result<br/>
+<img src="https://raw.githubusercontent.com/ferryfer14/intro_story/master/assets/record.gif" width=250><br/>
+
+<img src="https://raw.githubusercontent.com/ferryfer14/intro_story/master/assets/result.png" width=250><br/>
