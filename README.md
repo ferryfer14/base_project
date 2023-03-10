@@ -10,6 +10,8 @@ This widget allows you to create a textfield that takes in Textfield values and 
 
 ## Getting Started
 
+Install Platform android 28 in SDK Manager (android studio)
+
 android > local.properties
 ```properties 
     flutter.minSdkVersion=23
