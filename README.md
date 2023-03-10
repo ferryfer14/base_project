@@ -26,6 +26,6 @@ Terminal
 ### Visual Samples For Above Examples
 
 Result<br/>
-<img src="https://raw.githubusercontent.com/ferryfer14/intro_story/master/assets/record.gif" width=250><br/>
+<img src="https://github.com/ferryfer14/base_project/blob/master/assets/result.gif" width=250><br/>
 
-<img src="https://raw.githubusercontent.com/ferryfer14/intro_story/master/assets/result.png" width=250><br/>
+<img src="https://github.com/ferryfer14/base_project/blob/master/assets/result.png" width=250><br/>
