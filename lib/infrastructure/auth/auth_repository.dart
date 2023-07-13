@@ -10,7 +10,6 @@ import 'package:standart_project/domain/auth/profile_model.dart';
 import 'package:standart_project/domain/cabinet/cabinet_failure.dart';
 import 'package:standart_project/domain/cabinet/cabinet_model.dart';
 import 'package:standart_project/infrastructure/auth/data_sources/remote_data_provider.dart';
-import 'package:standart_project/infrastructure/cabinet/data_sources/local_data_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 @Injectable(as: IAuthRepository)

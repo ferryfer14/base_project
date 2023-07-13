@@ -7,7 +7,6 @@ import 'package:standart_project/domain/auth/merchant_model.dart';
 import 'package:standart_project/domain/auth/profile_model.dart';
 import 'package:standart_project/domain/cabinet/cabinet_model.dart';
 import 'package:standart_project/infrastructure/auth/merchant_dtos.dart';
-import '../../common/functions/app_functions.dart';
 
 part 'license_plate_dtos.freezed.dart';
 part 'license_plate_dtos.g.dart';

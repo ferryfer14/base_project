@@ -3,7 +3,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:standart_project/domain/auth/auth_model.dart';
 import 'package:standart_project/domain/cabinet/cabinet_model.dart';
-import '../../common/functions/app_functions.dart';
 
 part 'auth_dtos.freezed.dart';
 part 'auth_dtos.g.dart';

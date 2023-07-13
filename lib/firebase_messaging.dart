@@ -8,6 +8,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 import 'package:standart_project/app_constant.dart';
@@ -95,6 +96,138 @@ class FCM {
     }
   }
 
+  void initializeFlutterFire() async {
+    try {
+      _firebaseInitialized();
+      // FirebaseMessaging.instance.subscribeToTopic(Constants.subscribeFirebase);
+      FirebaseMessaging.instance.setForegroundNotificationPresentationOptions(
+        alert: true,
+        badge: true,
+        sound: true,
+      );
+
+      await FirebaseMessaging.instance.requestPermission(
+        alert: true,
+        announcement: true,
+        badge: true,
+        carPlay: false,
+        criticalAlert: false,
+        provisional: true,
+        sound: true,
+      );
+
+      FirebaseMessaging.instance.getInitialMessage().then((value) => null);
+
+      AwesomeNotifications().isNotificationAllowed().then((isAllowed) {
+        if (!isAllowed) {
+          AwesomeNotifications().requestPermissionToSendNotifications();
+        }
+      });
+
+      await AwesomeNotifications().initialize(
+        'resource://drawable/icon_apps',
+        [
+          NotificationChannel(
+            channelKey: 'basic_channel',
+            channelName: 'Basic Notifications',
+            channelDescription: 'This is channel for default notifications',
+            importance: NotificationImportance.High,
+            playSound: true,
+            onlyAlertOnce: true,
+            channelShowBadge: true,
+          ),
+        ],
+      );
+
+      FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
+          FlutterLocalNotificationsPlugin();
+
+      const initializationSettingsAndroid =
+          AndroidInitializationSettings('@drawable/icon_apps');
+      final DarwinInitializationSettings initializationSettingsDarwin =
+          DarwinInitializationSettings(
+              onDidReceiveLocalNotification: onDidReceiveLocalNotification);
+      final InitializationSettings initializationSettings =
+          InitializationSettings(
+              android: initializationSettingsAndroid,
+              iOS: initializationSettingsDarwin,
+              macOS: null);
+
+      await flutterLocalNotificationsPlugin.initialize(initializationSettings,
+          onDidReceiveNotificationResponse: selectNotification);
+
+      final bool? result = await flutterLocalNotificationsPlugin
+          .resolvePlatformSpecificImplementation<
+              IOSFlutterLocalNotificationsPlugin>()
+          ?.requestPermissions(
+            alert: true,
+            badge: true,
+            sound: true,
+          );
+    } catch (e) {
+      log(e.toString(), name: 'firebase');
+    }
+  }
+
+  void selectNotification(NotificationResponse notificationResponse) async {
+    final router = getIt<AppRouter>();
+    var data = notificationResponse.payload!.split(", ");
+
+    if (data.isNotEmpty) {
+      // if (data[0] == 'transaction') {
+      //   router.push(ProfileRoute());
+      // }
+    }
+  }
+
+  void onDidReceiveLocalNotification(
+      int? id, String? title, String? body, String? payload) async {
+    final router = getIt<AppRouter>();
+    var data = payload!.split(", ");
+
+    if (data.isNotEmpty) {
+      // if (data[0] == 'transaction') {
+      //   router.push(ProfileRoute());
+      // }
+    }
+  }
+
+  void _firebaseInitialized() async {
+    messagingRequestPermission();
+    SharedPreferences pref = getIt<SharedPreferences>();
+    FirebaseMessaging.instance.getToken().then((token) async {
+      log('token: $token', name: 'firebase');
+      pref.setString(vFirebaseToken, token!);
+      debugPrint('firebase token $token');
+    });
+  }
+
+  void messagingRequestPermission() async {
+    try {
+      NotificationSettings settings =
+          await FirebaseMessaging.instance.requestPermission(
+        alert: true,
+        announcement: false,
+        badge: true,
+        carPlay: false,
+        criticalAlert: false,
+        provisional: true,
+        sound: true,
+      );
+
+      if (settings.authorizationStatus == AuthorizationStatus.authorized) {
+        log('User granted permission');
+      } else if (settings.authorizationStatus ==
+          AuthorizationStatus.provisional) {
+        log('User granted provisional permission');
+      } else {
+        log('User declined or has not accepted permission');
+      }
+    } catch (e) {
+      log("error Firebase : $e");
+    }
+  }
+
   void showNotification({
     int? id,
     required NotificationsModel notification,
@@ -102,36 +235,6 @@ class FCM {
   }) async {
     String title = notification.title;
     String body = notification.body;
-    if (pref.getString(vLang) == "id") {
-      if (title == "Auto Cancel Booking") {
-        title = "Pembatalan Otomatis";
-      } else if (title == "Battery Swap Done") {
-        title = "Penukaran Baterai Selesai";
-      } else if (title == "All new and ready to go") {
-        title = "Siap untuk berangkat";
-      } else if (title == "Battery Swap Cancel") {
-        title = "Penukaran Baterai Dibatalkan";
-      }
-      if (body ==
-          "Your battery swap order is automatically canceled due to fifteen minutes passed") {
-        body =
-            "Pesanan penukaran baterai anda secara otomatis dibatalkan karena lima belas menit telah berlalu";
-      } else if (body ==
-          "Your battery swap order is automatically canceled due you not swapped battery") {
-        body =
-            "Pesanan penukaran baterai Anda secara otomatis dibatalkan karena Anda tidak menukar baterai";
-      } else if (body == "Your battery swap order successful") {
-        body = "Penukaran baterai anda telah berhasil";
-      } else if (body == "Safe travels!") {
-        body = "Hati-hati di jalan!";
-      } else if (body ==
-          "Your battery swap order cancelled. You close the slot door without putting the battery in it.") {
-        body =
-            "Penukaran baterai anda dibatalkan. Anda menutup pintu slot tanpa meletakan baterai di dalamnya";
-      } else if (body == "Your battery swap order cancelled") {
-        body = "Penukaran baterai anda berhasil dibatalkan";
-      }
-    }
     await AwesomeNotifications().createNotification(
       content: NotificationContent(
         id: id ?? 1000,

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+    <color name="white_color">#fffff</color>
+    <color name="black_color">#00000</color>
+    <color name="primary_color">#73BEC5</color>
+    <color name="primary_hover">#5C989E</color>
+    <color name="primary_border">#B9DFE2</color>
+    <color name="secondary_color">#757575</color>
+    <color name="input_color">#404040</color>
+    <color name="bar_color">#EDEDED</color>
+    <color name="unselected_color">#C2C2C2</color>
+    <color name="selected_color">#F4F9F9</color>
+    <color name="success_color">#43936C</color>
+    <color name="danger_color">#CB3A31</color>
+    <color name="divider_color">#E0E0E0</color>
+</resources>

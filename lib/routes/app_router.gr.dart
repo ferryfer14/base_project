@@ -17,12 +17,10 @@ class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
-    ProfileRoute.name: (routeData) {
-      final args = routeData.argsAs<ProfileRouteArgs>(
-          orElse: () => const ProfileRouteArgs());
+    SignInRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
-        child: ProfilePage(key: args.key),
+        child: const SignInPage(),
       );
     },
     WebviewRoute.name: (routeData) {
@@ -44,7 +42,7 @@ class _$AppRouter extends RootStackRouter {
   @override
   List<RouteConfig> get routes => [
         RouteConfig(
-          ProfileRoute.name,
+          SignInRoute.name,
           path: '/',
         ),
         RouteConfig(
@@ -55,27 +53,15 @@ class _$AppRouter extends RootStackRouter {
 }
 
 /// generated route for
-/// [ProfilePage]
-class ProfileRoute extends PageRouteInfo<ProfileRouteArgs> {
-  ProfileRoute({Key? key})
+/// [SignInPage]
+class SignInRoute extends PageRouteInfo<void> {
+  const SignInRoute()
       : super(
-          ProfileRoute.name,
+          SignInRoute.name,
           path: '/',
-          args: ProfileRouteArgs(key: key),
         );
 
-  static const String name = 'ProfileRoute';
-}
-
-class ProfileRouteArgs {
-  const ProfileRouteArgs({this.key});
-
-  final Key? key;
-
-  @override
-  String toString() {
-    return 'ProfileRouteArgs{key: $key}';
-  }
+  static const String name = 'SignInRoute';
 }
 
 /// generated route for

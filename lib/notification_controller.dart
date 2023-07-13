@@ -17,7 +17,7 @@ class NotificationController {
       if (receivedAction.payload!.isNotEmpty) {
         final payload = receivedAction.payload!;
         if (payload['screen'] == 'transaction') {
-          router.push(ProfileRoute());
+          router.push(const SignInRoute());
         }
       }
     }
