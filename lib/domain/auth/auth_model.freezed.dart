@@ -16,12 +16,12 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$AuthModel {
-  String get access_token => throw _privateConstructorUsedError;
-  String get token_type => throw _privateConstructorUsedError;
-  String get refresh_token => throw _privateConstructorUsedError;
-  int get expires_in => throw _privateConstructorUsedError;
-  String get scope => throw _privateConstructorUsedError;
-  String get jti => throw _privateConstructorUsedError;
+  StringSingleLine get access_token => throw _privateConstructorUsedError;
+  StringSingleLine get token_type => throw _privateConstructorUsedError;
+  StringSingleLine get refresh_token => throw _privateConstructorUsedError;
+  NumericId get expires_in => throw _privateConstructorUsedError;
+  StringSingleLine get scope => throw _privateConstructorUsedError;
+  StringSingleLine get jti => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $AuthModelCopyWith<AuthModel> get copyWith =>
@@ -34,12 +34,12 @@ abstract class $AuthModelCopyWith<$Res> {
       _$AuthModelCopyWithImpl<$Res, AuthModel>;
   @useResult
   $Res call(
-      {String access_token,
-      String token_type,
-      String refresh_token,
-      int expires_in,
-      String scope,
-      String jti});
+      {StringSingleLine access_token,
+      StringSingleLine token_type,
+      StringSingleLine refresh_token,
+      NumericId expires_in,
+      StringSingleLine scope,
+      StringSingleLine jti});
 }
 
 /// @nodoc
@@ -66,27 +66,27 @@ class _$AuthModelCopyWithImpl<$Res, $Val extends AuthModel>
       access_token: null == access_token
           ? _value.access_token
           : access_token // ignore: cast_nullable_to_non_nullable
-              as String,
+              as StringSingleLine,
       token_type: null == token_type
           ? _value.token_type
           : token_type // ignore: cast_nullable_to_non_nullable
-              as String,
+              as StringSingleLine,
       refresh_token: null == refresh_token
           ? _value.refresh_token
           : refresh_token // ignore: cast_nullable_to_non_nullable
-              as String,
+              as StringSingleLine,
       expires_in: null == expires_in
           ? _value.expires_in
           : expires_in // ignore: cast_nullable_to_non_nullable
-              as int,
+              as NumericId,
       scope: null == scope
           ? _value.scope
           : scope // ignore: cast_nullable_to_non_nullable
-              as String,
+              as StringSingleLine,
       jti: null == jti
           ? _value.jti
           : jti // ignore: cast_nullable_to_non_nullable
-              as String,
+              as StringSingleLine,
     ) as $Val);
   }
 }
@@ -99,12 +99,12 @@ abstract class _$$_AuthModelCopyWith<$Res> implements $AuthModelCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {String access_token,
-      String token_type,
-      String refresh_token,
-      int expires_in,
-      String scope,
-      String jti});
+      {StringSingleLine access_token,
+      StringSingleLine token_type,
+      StringSingleLine refresh_token,
+      NumericId expires_in,
+      StringSingleLine scope,
+      StringSingleLine jti});
 }
 
 /// @nodoc
@@ -129,27 +129,27 @@ class __$$_AuthModelCopyWithImpl<$Res>
       access_token: null == access_token
           ? _value.access_token
           : access_token // ignore: cast_nullable_to_non_nullable
-              as String,
+              as StringSingleLine,
       token_type: null == token_type
           ? _value.token_type
           : token_type // ignore: cast_nullable_to_non_nullable
-              as String,
+              as StringSingleLine,
       refresh_token: null == refresh_token
           ? _value.refresh_token
           : refresh_token // ignore: cast_nullable_to_non_nullable
-              as String,
+              as StringSingleLine,
       expires_in: null == expires_in
           ? _value.expires_in
           : expires_in // ignore: cast_nullable_to_non_nullable
-              as int,
+              as NumericId,
       scope: null == scope
           ? _value.scope
           : scope // ignore: cast_nullable_to_non_nullable
-              as String,
+              as StringSingleLine,
       jti: null == jti
           ? _value.jti
           : jti // ignore: cast_nullable_to_non_nullable
-              as String,
+              as StringSingleLine,
     ));
   }
 }
@@ -167,17 +167,17 @@ class _$_AuthModel extends _AuthModel {
       : super._();
 
   @override
-  final String access_token;
+  final StringSingleLine access_token;
   @override
-  final String token_type;
+  final StringSingleLine token_type;
   @override
-  final String refresh_token;
+  final StringSingleLine refresh_token;
   @override
-  final int expires_in;
+  final NumericId expires_in;
   @override
-  final String scope;
+  final StringSingleLine scope;
   @override
-  final String jti;
+  final StringSingleLine jti;
 
   @override
   String toString() {
@@ -214,26 +214,26 @@ class _$_AuthModel extends _AuthModel {
 
 abstract class _AuthModel extends AuthModel {
   const factory _AuthModel(
-      {required final String access_token,
-      required final String token_type,
-      required final String refresh_token,
-      required final int expires_in,
-      required final String scope,
-      required final String jti}) = _$_AuthModel;
+      {required final StringSingleLine access_token,
+      required final StringSingleLine token_type,
+      required final StringSingleLine refresh_token,
+      required final NumericId expires_in,
+      required final StringSingleLine scope,
+      required final StringSingleLine jti}) = _$_AuthModel;
   const _AuthModel._() : super._();
 
   @override
-  String get access_token;
+  StringSingleLine get access_token;
   @override
-  String get token_type;
+  StringSingleLine get token_type;
   @override
-  String get refresh_token;
+  StringSingleLine get refresh_token;
   @override
-  int get expires_in;
+  NumericId get expires_in;
   @override
-  String get scope;
+  StringSingleLine get scope;
   @override
-  String get jti;
+  StringSingleLine get jti;
   @override
   @JsonKey(ignore: true)
   _$$_AuthModelCopyWith<_$_AuthModel> get copyWith =>

@@ -4,6 +4,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:standart_project/domain/auth/auth_model.dart';
 import 'package:standart_project/domain/cabinet/cabinet_model.dart';
 
+import '../../domain/core/value_objects.dart';
+
 part 'auth_dtos.freezed.dart';
 part 'auth_dtos.g.dart';
 
@@ -24,12 +26,12 @@ class AuthModelDto with _$AuthModelDto {
 
   AuthModel toDomain() {
     return AuthModel(
-      access_token: access_token ?? "",
-      token_type: token_type ?? "",
-      refresh_token: refresh_token ?? "",
-      expires_in: expires_in ?? 0,
-      scope: scope ?? "",
-      jti: jti ?? "",
+      access_token: StringSingleLine(access_token ?? ""),
+      token_type: StringSingleLine(token_type ?? ""),
+      refresh_token: StringSingleLine(refresh_token ?? ""),
+      expires_in: NumericId(expires_in ?? 0),
+      scope: StringSingleLine(scope ?? ""),
+      jti: StringSingleLine(jti ?? ""),
     );
   }
 }
