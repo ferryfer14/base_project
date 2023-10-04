@@ -175,11 +175,11 @@ class _$TransactionModelCopyWithImpl<$Res, $Val extends TransactionModel>
 }
 
 /// @nodoc
-abstract class _$$_TransactionModelCopyWith<$Res>
+abstract class _$$TransactionModelImplCopyWith<$Res>
     implements $TransactionModelCopyWith<$Res> {
-  factory _$$_TransactionModelCopyWith(
-          _$_TransactionModel value, $Res Function(_$_TransactionModel) then) =
-      __$$_TransactionModelCopyWithImpl<$Res>;
+  factory _$$TransactionModelImplCopyWith(_$TransactionModelImpl value,
+          $Res Function(_$TransactionModelImpl) then) =
+      __$$TransactionModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -205,11 +205,11 @@ abstract class _$$_TransactionModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_TransactionModelCopyWithImpl<$Res>
-    extends _$TransactionModelCopyWithImpl<$Res, _$_TransactionModel>
-    implements _$$_TransactionModelCopyWith<$Res> {
-  __$$_TransactionModelCopyWithImpl(
-      _$_TransactionModel _value, $Res Function(_$_TransactionModel) _then)
+class __$$TransactionModelImplCopyWithImpl<$Res>
+    extends _$TransactionModelCopyWithImpl<$Res, _$TransactionModelImpl>
+    implements _$$TransactionModelImplCopyWith<$Res> {
+  __$$TransactionModelImplCopyWithImpl(_$TransactionModelImpl _value,
+      $Res Function(_$TransactionModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -228,7 +228,7 @@ class __$$_TransactionModelCopyWithImpl<$Res>
     Object? swap_before = freezed,
     Object? booking_status = freezed,
   }) {
-    return _then(_$_TransactionModel(
+    return _then(_$TransactionModelImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -283,8 +283,8 @@ class __$$_TransactionModelCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_TransactionModel extends _TransactionModel {
-  const _$_TransactionModel(
+class _$TransactionModelImpl extends _TransactionModel {
+  const _$TransactionModelImpl(
       {this.id,
       this.booking_id,
       this.cabinet,
@@ -333,7 +333,7 @@ class _$_TransactionModel extends _TransactionModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_TransactionModel &&
+            other is _$TransactionModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.booking_id, booking_id) ||
                 other.booking_id == booking_id) &&
@@ -375,8 +375,9 @@ class _$_TransactionModel extends _TransactionModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_TransactionModelCopyWith<_$_TransactionModel> get copyWith =>
-      __$$_TransactionModelCopyWithImpl<_$_TransactionModel>(this, _$identity);
+  _$$TransactionModelImplCopyWith<_$TransactionModelImpl> get copyWith =>
+      __$$TransactionModelImplCopyWithImpl<_$TransactionModelImpl>(
+          this, _$identity);
 }
 
 abstract class _TransactionModel extends TransactionModel {
@@ -392,7 +393,7 @@ abstract class _TransactionModel extends TransactionModel {
       final String? swapped_at,
       final String? verified_at,
       final String? swap_before,
-      final String? booking_status}) = _$_TransactionModel;
+      final String? booking_status}) = _$TransactionModelImpl;
   const _TransactionModel._() : super._();
 
   @override
@@ -421,6 +422,6 @@ abstract class _TransactionModel extends TransactionModel {
   String? get booking_status;
   @override
   @JsonKey(ignore: true)
-  _$$_TransactionModelCopyWith<_$_TransactionModel> get copyWith =>
+  _$$TransactionModelImplCopyWith<_$TransactionModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

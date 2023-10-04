@@ -7,6 +7,7 @@ import '../../../../application/auth/auth_bloc.dart';
 import '../../../../application/auth/sign_in/sign_in_bloc.dart';
 import '../../../../injection.dart';
 
+@RoutePage()
 class SignInPage extends StatelessWidget {
   const SignInPage({Key? key}) : super(key: key);
 

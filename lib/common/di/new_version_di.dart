@@ -1,4 +1,3 @@
-import 'package:connectivity/connectivity.dart';
 import 'package:injectable/injectable.dart';
 import 'package:new_version/new_version.dart';
 

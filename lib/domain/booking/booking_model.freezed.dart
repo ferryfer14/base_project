@@ -119,11 +119,11 @@ class _$BookingModelCopyWithImpl<$Res, $Val extends BookingModel>
 }
 
 /// @nodoc
-abstract class _$$_BookingModelCopyWith<$Res>
+abstract class _$$BookingModelImplCopyWith<$Res>
     implements $BookingModelCopyWith<$Res> {
-  factory _$$_BookingModelCopyWith(
-          _$_BookingModel value, $Res Function(_$_BookingModel) then) =
-      __$$_BookingModelCopyWithImpl<$Res>;
+  factory _$$BookingModelImplCopyWith(
+          _$BookingModelImpl value, $Res Function(_$BookingModelImpl) then) =
+      __$$BookingModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -141,11 +141,11 @@ abstract class _$$_BookingModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_BookingModelCopyWithImpl<$Res>
-    extends _$BookingModelCopyWithImpl<$Res, _$_BookingModel>
-    implements _$$_BookingModelCopyWith<$Res> {
-  __$$_BookingModelCopyWithImpl(
-      _$_BookingModel _value, $Res Function(_$_BookingModel) _then)
+class __$$BookingModelImplCopyWithImpl<$Res>
+    extends _$BookingModelCopyWithImpl<$Res, _$BookingModelImpl>
+    implements _$$BookingModelImplCopyWith<$Res> {
+  __$$BookingModelImplCopyWithImpl(
+      _$BookingModelImpl _value, $Res Function(_$BookingModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -156,7 +156,7 @@ class __$$_BookingModelCopyWithImpl<$Res>
     Object? cabinet = freezed,
     Object? slot = freezed,
   }) {
-    return _then(_$_BookingModel(
+    return _then(_$BookingModelImpl(
       available: freezed == available
           ? _value.available
           : available // ignore: cast_nullable_to_non_nullable
@@ -179,8 +179,9 @@ class __$$_BookingModelCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_BookingModel extends _BookingModel {
-  const _$_BookingModel({this.available, this.battery, this.cabinet, this.slot})
+class _$BookingModelImpl extends _BookingModel {
+  const _$BookingModelImpl(
+      {this.available, this.battery, this.cabinet, this.slot})
       : super._();
 
   @override
@@ -201,7 +202,7 @@ class _$_BookingModel extends _BookingModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_BookingModel &&
+            other is _$BookingModelImpl &&
             (identical(other.available, available) ||
                 other.available == available) &&
             (identical(other.battery, battery) || other.battery == battery) &&
@@ -216,8 +217,8 @@ class _$_BookingModel extends _BookingModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_BookingModelCopyWith<_$_BookingModel> get copyWith =>
-      __$$_BookingModelCopyWithImpl<_$_BookingModel>(this, _$identity);
+  _$$BookingModelImplCopyWith<_$BookingModelImpl> get copyWith =>
+      __$$BookingModelImplCopyWithImpl<_$BookingModelImpl>(this, _$identity);
 }
 
 abstract class _BookingModel extends BookingModel {
@@ -225,7 +226,7 @@ abstract class _BookingModel extends BookingModel {
       {final int? available,
       final BatteryModel? battery,
       final CabinetModel? cabinet,
-      final SlotModel? slot}) = _$_BookingModel;
+      final SlotModel? slot}) = _$BookingModelImpl;
   const _BookingModel._() : super._();
 
   @override
@@ -238,6 +239,6 @@ abstract class _BookingModel extends BookingModel {
   SlotModel? get slot;
   @override
   @JsonKey(ignore: true)
-  _$$_BookingModelCopyWith<_$_BookingModel> get copyWith =>
+  _$$BookingModelImplCopyWith<_$BookingModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

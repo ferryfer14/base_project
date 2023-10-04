@@ -99,10 +99,11 @@ class _$SlotModelCopyWithImpl<$Res, $Val extends SlotModel>
 }
 
 /// @nodoc
-abstract class _$$_SlotModelCopyWith<$Res> implements $SlotModelCopyWith<$Res> {
-  factory _$$_SlotModelCopyWith(
-          _$_SlotModel value, $Res Function(_$_SlotModel) then) =
-      __$$_SlotModelCopyWithImpl<$Res>;
+abstract class _$$SlotModelImplCopyWith<$Res>
+    implements $SlotModelCopyWith<$Res> {
+  factory _$$SlotModelImplCopyWith(
+          _$SlotModelImpl value, $Res Function(_$SlotModelImpl) then) =
+      __$$SlotModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -117,11 +118,11 @@ abstract class _$$_SlotModelCopyWith<$Res> implements $SlotModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_SlotModelCopyWithImpl<$Res>
-    extends _$SlotModelCopyWithImpl<$Res, _$_SlotModel>
-    implements _$$_SlotModelCopyWith<$Res> {
-  __$$_SlotModelCopyWithImpl(
-      _$_SlotModel _value, $Res Function(_$_SlotModel) _then)
+class __$$SlotModelImplCopyWithImpl<$Res>
+    extends _$SlotModelCopyWithImpl<$Res, _$SlotModelImpl>
+    implements _$$SlotModelImplCopyWith<$Res> {
+  __$$SlotModelImplCopyWithImpl(
+      _$SlotModelImpl _value, $Res Function(_$SlotModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -133,7 +134,7 @@ class __$$_SlotModelCopyWithImpl<$Res>
     Object? status = freezed,
     Object? battery = freezed,
   }) {
-    return _then(_$_SlotModel(
+    return _then(_$SlotModelImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -160,8 +161,8 @@ class __$$_SlotModelCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SlotModel extends _SlotModel {
-  const _$_SlotModel(
+class _$SlotModelImpl extends _SlotModel {
+  const _$SlotModelImpl(
       {this.id, this.slot_number, this.percentages, this.status, this.battery})
       : super._();
 
@@ -185,7 +186,7 @@ class _$_SlotModel extends _SlotModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SlotModel &&
+            other is _$SlotModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.slot_number, slot_number) ||
                 other.slot_number == slot_number) &&
@@ -202,8 +203,8 @@ class _$_SlotModel extends _SlotModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SlotModelCopyWith<_$_SlotModel> get copyWith =>
-      __$$_SlotModelCopyWithImpl<_$_SlotModel>(this, _$identity);
+  _$$SlotModelImplCopyWith<_$SlotModelImpl> get copyWith =>
+      __$$SlotModelImplCopyWithImpl<_$SlotModelImpl>(this, _$identity);
 }
 
 abstract class _SlotModel extends SlotModel {
@@ -212,7 +213,7 @@ abstract class _SlotModel extends SlotModel {
       final int? slot_number,
       final int? percentages,
       final String? status,
-      final BatteryModel? battery}) = _$_SlotModel;
+      final BatteryModel? battery}) = _$SlotModelImpl;
   const _SlotModel._() : super._();
 
   @override
@@ -227,6 +228,6 @@ abstract class _SlotModel extends SlotModel {
   BatteryModel? get battery;
   @override
   @JsonKey(ignore: true)
-  _$$_SlotModelCopyWith<_$_SlotModel> get copyWith =>
+  _$$SlotModelImplCopyWith<_$SlotModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

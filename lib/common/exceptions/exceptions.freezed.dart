@@ -120,20 +120,20 @@ class _$AppExceptionCopyWithImpl<$Res, $Val extends AppException>
 }
 
 /// @nodoc
-abstract class _$$_ServerExceptionCopyWith<$Res> {
-  factory _$$_ServerExceptionCopyWith(
-          _$_ServerException value, $Res Function(_$_ServerException) then) =
-      __$$_ServerExceptionCopyWithImpl<$Res>;
+abstract class _$$ServerExceptionImplCopyWith<$Res> {
+  factory _$$ServerExceptionImplCopyWith(_$ServerExceptionImpl value,
+          $Res Function(_$ServerExceptionImpl) then) =
+      __$$ServerExceptionImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String? errorMessage});
 }
 
 /// @nodoc
-class __$$_ServerExceptionCopyWithImpl<$Res>
-    extends _$AppExceptionCopyWithImpl<$Res, _$_ServerException>
-    implements _$$_ServerExceptionCopyWith<$Res> {
-  __$$_ServerExceptionCopyWithImpl(
-      _$_ServerException _value, $Res Function(_$_ServerException) _then)
+class __$$ServerExceptionImplCopyWithImpl<$Res>
+    extends _$AppExceptionCopyWithImpl<$Res, _$ServerExceptionImpl>
+    implements _$$ServerExceptionImplCopyWith<$Res> {
+  __$$ServerExceptionImplCopyWithImpl(
+      _$ServerExceptionImpl _value, $Res Function(_$ServerExceptionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -141,7 +141,7 @@ class __$$_ServerExceptionCopyWithImpl<$Res>
   $Res call({
     Object? errorMessage = freezed,
   }) {
-    return _then(_$_ServerException(
+    return _then(_$ServerExceptionImpl(
       errorMessage: freezed == errorMessage
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
@@ -152,8 +152,8 @@ class __$$_ServerExceptionCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ServerException implements _ServerException {
-  const _$_ServerException({this.errorMessage});
+class _$ServerExceptionImpl implements _ServerException {
+  const _$ServerExceptionImpl({this.errorMessage});
 
   @override
   final String? errorMessage;
@@ -167,7 +167,7 @@ class _$_ServerException implements _ServerException {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ServerException &&
+            other is _$ServerExceptionImpl &&
             (identical(other.errorMessage, errorMessage) ||
                 other.errorMessage == errorMessage));
   }
@@ -178,8 +178,9 @@ class _$_ServerException implements _ServerException {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ServerExceptionCopyWith<_$_ServerException> get copyWith =>
-      __$$_ServerExceptionCopyWithImpl<_$_ServerException>(this, _$identity);
+  _$$ServerExceptionImplCopyWith<_$ServerExceptionImpl> get copyWith =>
+      __$$ServerExceptionImplCopyWithImpl<_$ServerExceptionImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -291,29 +292,29 @@ class _$_ServerException implements _ServerException {
 
 abstract class _ServerException implements AppException, Exception {
   const factory _ServerException({final String? errorMessage}) =
-      _$_ServerException;
+      _$ServerExceptionImpl;
 
   String? get errorMessage;
   @JsonKey(ignore: true)
-  _$$_ServerExceptionCopyWith<_$_ServerException> get copyWith =>
+  _$$ServerExceptionImplCopyWith<_$ServerExceptionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_UnexpectedExceptionCopyWith<$Res> {
-  factory _$$_UnexpectedExceptionCopyWith(_$_UnexpectedException value,
-          $Res Function(_$_UnexpectedException) then) =
-      __$$_UnexpectedExceptionCopyWithImpl<$Res>;
+abstract class _$$UnexpectedExceptionImplCopyWith<$Res> {
+  factory _$$UnexpectedExceptionImplCopyWith(_$UnexpectedExceptionImpl value,
+          $Res Function(_$UnexpectedExceptionImpl) then) =
+      __$$UnexpectedExceptionImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String? errorMessage});
 }
 
 /// @nodoc
-class __$$_UnexpectedExceptionCopyWithImpl<$Res>
-    extends _$AppExceptionCopyWithImpl<$Res, _$_UnexpectedException>
-    implements _$$_UnexpectedExceptionCopyWith<$Res> {
-  __$$_UnexpectedExceptionCopyWithImpl(_$_UnexpectedException _value,
-      $Res Function(_$_UnexpectedException) _then)
+class __$$UnexpectedExceptionImplCopyWithImpl<$Res>
+    extends _$AppExceptionCopyWithImpl<$Res, _$UnexpectedExceptionImpl>
+    implements _$$UnexpectedExceptionImplCopyWith<$Res> {
+  __$$UnexpectedExceptionImplCopyWithImpl(_$UnexpectedExceptionImpl _value,
+      $Res Function(_$UnexpectedExceptionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -321,7 +322,7 @@ class __$$_UnexpectedExceptionCopyWithImpl<$Res>
   $Res call({
     Object? errorMessage = freezed,
   }) {
-    return _then(_$_UnexpectedException(
+    return _then(_$UnexpectedExceptionImpl(
       errorMessage: freezed == errorMessage
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
@@ -332,8 +333,8 @@ class __$$_UnexpectedExceptionCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UnexpectedException implements _UnexpectedException {
-  const _$_UnexpectedException({this.errorMessage});
+class _$UnexpectedExceptionImpl implements _UnexpectedException {
+  const _$UnexpectedExceptionImpl({this.errorMessage});
 
   @override
   final String? errorMessage;
@@ -347,7 +348,7 @@ class _$_UnexpectedException implements _UnexpectedException {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_UnexpectedException &&
+            other is _$UnexpectedExceptionImpl &&
             (identical(other.errorMessage, errorMessage) ||
                 other.errorMessage == errorMessage));
   }
@@ -358,8 +359,8 @@ class _$_UnexpectedException implements _UnexpectedException {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UnexpectedExceptionCopyWith<_$_UnexpectedException> get copyWith =>
-      __$$_UnexpectedExceptionCopyWithImpl<_$_UnexpectedException>(
+  _$$UnexpectedExceptionImplCopyWith<_$UnexpectedExceptionImpl> get copyWith =>
+      __$$UnexpectedExceptionImplCopyWithImpl<_$UnexpectedExceptionImpl>(
           this, _$identity);
 
   @override
@@ -472,29 +473,29 @@ class _$_UnexpectedException implements _UnexpectedException {
 
 abstract class _UnexpectedException implements AppException, Exception {
   const factory _UnexpectedException({final String? errorMessage}) =
-      _$_UnexpectedException;
+      _$UnexpectedExceptionImpl;
 
   String? get errorMessage;
   @JsonKey(ignore: true)
-  _$$_UnexpectedExceptionCopyWith<_$_UnexpectedException> get copyWith =>
+  _$$UnexpectedExceptionImplCopyWith<_$UnexpectedExceptionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_LocationIsNotAllowedCopyWith<$Res> {
-  factory _$$_LocationIsNotAllowedCopyWith(_$_LocationIsNotAllowed value,
-          $Res Function(_$_LocationIsNotAllowed) then) =
-      __$$_LocationIsNotAllowedCopyWithImpl<$Res>;
+abstract class _$$LocationIsNotAllowedImplCopyWith<$Res> {
+  factory _$$LocationIsNotAllowedImplCopyWith(_$LocationIsNotAllowedImpl value,
+          $Res Function(_$LocationIsNotAllowedImpl) then) =
+      __$$LocationIsNotAllowedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String? errorMessage});
 }
 
 /// @nodoc
-class __$$_LocationIsNotAllowedCopyWithImpl<$Res>
-    extends _$AppExceptionCopyWithImpl<$Res, _$_LocationIsNotAllowed>
-    implements _$$_LocationIsNotAllowedCopyWith<$Res> {
-  __$$_LocationIsNotAllowedCopyWithImpl(_$_LocationIsNotAllowed _value,
-      $Res Function(_$_LocationIsNotAllowed) _then)
+class __$$LocationIsNotAllowedImplCopyWithImpl<$Res>
+    extends _$AppExceptionCopyWithImpl<$Res, _$LocationIsNotAllowedImpl>
+    implements _$$LocationIsNotAllowedImplCopyWith<$Res> {
+  __$$LocationIsNotAllowedImplCopyWithImpl(_$LocationIsNotAllowedImpl _value,
+      $Res Function(_$LocationIsNotAllowedImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -502,7 +503,7 @@ class __$$_LocationIsNotAllowedCopyWithImpl<$Res>
   $Res call({
     Object? errorMessage = freezed,
   }) {
-    return _then(_$_LocationIsNotAllowed(
+    return _then(_$LocationIsNotAllowedImpl(
       errorMessage: freezed == errorMessage
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
@@ -513,8 +514,8 @@ class __$$_LocationIsNotAllowedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_LocationIsNotAllowed implements _LocationIsNotAllowed {
-  const _$_LocationIsNotAllowed({this.errorMessage});
+class _$LocationIsNotAllowedImpl implements _LocationIsNotAllowed {
+  const _$LocationIsNotAllowedImpl({this.errorMessage});
 
   @override
   final String? errorMessage;
@@ -528,7 +529,7 @@ class _$_LocationIsNotAllowed implements _LocationIsNotAllowed {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LocationIsNotAllowed &&
+            other is _$LocationIsNotAllowedImpl &&
             (identical(other.errorMessage, errorMessage) ||
                 other.errorMessage == errorMessage));
   }
@@ -539,9 +540,10 @@ class _$_LocationIsNotAllowed implements _LocationIsNotAllowed {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LocationIsNotAllowedCopyWith<_$_LocationIsNotAllowed> get copyWith =>
-      __$$_LocationIsNotAllowedCopyWithImpl<_$_LocationIsNotAllowed>(
-          this, _$identity);
+  _$$LocationIsNotAllowedImplCopyWith<_$LocationIsNotAllowedImpl>
+      get copyWith =>
+          __$$LocationIsNotAllowedImplCopyWithImpl<_$LocationIsNotAllowedImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -653,34 +655,34 @@ class _$_LocationIsNotAllowed implements _LocationIsNotAllowed {
 
 abstract class _LocationIsNotAllowed implements AppException, Exception {
   const factory _LocationIsNotAllowed({final String? errorMessage}) =
-      _$_LocationIsNotAllowed;
+      _$LocationIsNotAllowedImpl;
 
   String? get errorMessage;
   @JsonKey(ignore: true)
-  _$$_LocationIsNotAllowedCopyWith<_$_LocationIsNotAllowed> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$LocationIsNotAllowedImplCopyWith<_$LocationIsNotAllowedImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_BadNetworkExceptionCopyWith<$Res> {
-  factory _$$_BadNetworkExceptionCopyWith(_$_BadNetworkException value,
-          $Res Function(_$_BadNetworkException) then) =
-      __$$_BadNetworkExceptionCopyWithImpl<$Res>;
+abstract class _$$BadNetworkExceptionImplCopyWith<$Res> {
+  factory _$$BadNetworkExceptionImplCopyWith(_$BadNetworkExceptionImpl value,
+          $Res Function(_$BadNetworkExceptionImpl) then) =
+      __$$BadNetworkExceptionImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_BadNetworkExceptionCopyWithImpl<$Res>
-    extends _$AppExceptionCopyWithImpl<$Res, _$_BadNetworkException>
-    implements _$$_BadNetworkExceptionCopyWith<$Res> {
-  __$$_BadNetworkExceptionCopyWithImpl(_$_BadNetworkException _value,
-      $Res Function(_$_BadNetworkException) _then)
+class __$$BadNetworkExceptionImplCopyWithImpl<$Res>
+    extends _$AppExceptionCopyWithImpl<$Res, _$BadNetworkExceptionImpl>
+    implements _$$BadNetworkExceptionImplCopyWith<$Res> {
+  __$$BadNetworkExceptionImplCopyWithImpl(_$BadNetworkExceptionImpl _value,
+      $Res Function(_$BadNetworkExceptionImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_BadNetworkException implements _BadNetworkException {
-  const _$_BadNetworkException();
+class _$BadNetworkExceptionImpl implements _BadNetworkException {
+  const _$BadNetworkExceptionImpl();
 
   @override
   String toString() {
@@ -690,7 +692,8 @@ class _$_BadNetworkException implements _BadNetworkException {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_BadNetworkException);
+        (other.runtimeType == runtimeType &&
+            other is _$BadNetworkExceptionImpl);
   }
 
   @override
@@ -805,29 +808,31 @@ class _$_BadNetworkException implements _BadNetworkException {
 }
 
 abstract class _BadNetworkException implements AppException, Exception {
-  const factory _BadNetworkException() = _$_BadNetworkException;
+  const factory _BadNetworkException() = _$BadNetworkExceptionImpl;
 }
 
 /// @nodoc
-abstract class _$$_InternalServerExceptionCopyWith<$Res> {
-  factory _$$_InternalServerExceptionCopyWith(_$_InternalServerException value,
-          $Res Function(_$_InternalServerException) then) =
-      __$$_InternalServerExceptionCopyWithImpl<$Res>;
+abstract class _$$InternalServerExceptionImplCopyWith<$Res> {
+  factory _$$InternalServerExceptionImplCopyWith(
+          _$InternalServerExceptionImpl value,
+          $Res Function(_$InternalServerExceptionImpl) then) =
+      __$$InternalServerExceptionImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_InternalServerExceptionCopyWithImpl<$Res>
-    extends _$AppExceptionCopyWithImpl<$Res, _$_InternalServerException>
-    implements _$$_InternalServerExceptionCopyWith<$Res> {
-  __$$_InternalServerExceptionCopyWithImpl(_$_InternalServerException _value,
-      $Res Function(_$_InternalServerException) _then)
+class __$$InternalServerExceptionImplCopyWithImpl<$Res>
+    extends _$AppExceptionCopyWithImpl<$Res, _$InternalServerExceptionImpl>
+    implements _$$InternalServerExceptionImplCopyWith<$Res> {
+  __$$InternalServerExceptionImplCopyWithImpl(
+      _$InternalServerExceptionImpl _value,
+      $Res Function(_$InternalServerExceptionImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_InternalServerException implements _InternalServerException {
-  const _$_InternalServerException();
+class _$InternalServerExceptionImpl implements _InternalServerException {
+  const _$InternalServerExceptionImpl();
 
   @override
   String toString() {
@@ -838,7 +843,7 @@ class _$_InternalServerException implements _InternalServerException {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_InternalServerException);
+            other is _$InternalServerExceptionImpl);
   }
 
   @override
@@ -953,25 +958,26 @@ class _$_InternalServerException implements _InternalServerException {
 }
 
 abstract class _InternalServerException implements AppException, Exception {
-  const factory _InternalServerException() = _$_InternalServerException;
+  const factory _InternalServerException() = _$InternalServerExceptionImpl;
 }
 
 /// @nodoc
-abstract class _$$_UnauthenticatedExceptionCopyWith<$Res> {
-  factory _$$_UnauthenticatedExceptionCopyWith(
-          _$_UnauthenticatedException value,
-          $Res Function(_$_UnauthenticatedException) then) =
-      __$$_UnauthenticatedExceptionCopyWithImpl<$Res>;
+abstract class _$$UnauthenticatedExceptionImplCopyWith<$Res> {
+  factory _$$UnauthenticatedExceptionImplCopyWith(
+          _$UnauthenticatedExceptionImpl value,
+          $Res Function(_$UnauthenticatedExceptionImpl) then) =
+      __$$UnauthenticatedExceptionImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String? errorMessage});
 }
 
 /// @nodoc
-class __$$_UnauthenticatedExceptionCopyWithImpl<$Res>
-    extends _$AppExceptionCopyWithImpl<$Res, _$_UnauthenticatedException>
-    implements _$$_UnauthenticatedExceptionCopyWith<$Res> {
-  __$$_UnauthenticatedExceptionCopyWithImpl(_$_UnauthenticatedException _value,
-      $Res Function(_$_UnauthenticatedException) _then)
+class __$$UnauthenticatedExceptionImplCopyWithImpl<$Res>
+    extends _$AppExceptionCopyWithImpl<$Res, _$UnauthenticatedExceptionImpl>
+    implements _$$UnauthenticatedExceptionImplCopyWith<$Res> {
+  __$$UnauthenticatedExceptionImplCopyWithImpl(
+      _$UnauthenticatedExceptionImpl _value,
+      $Res Function(_$UnauthenticatedExceptionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -979,7 +985,7 @@ class __$$_UnauthenticatedExceptionCopyWithImpl<$Res>
   $Res call({
     Object? errorMessage = freezed,
   }) {
-    return _then(_$_UnauthenticatedException(
+    return _then(_$UnauthenticatedExceptionImpl(
       errorMessage: freezed == errorMessage
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
@@ -990,8 +996,8 @@ class __$$_UnauthenticatedExceptionCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UnauthenticatedException implements _UnauthenticatedException {
-  const _$_UnauthenticatedException({this.errorMessage});
+class _$UnauthenticatedExceptionImpl implements _UnauthenticatedException {
+  const _$UnauthenticatedExceptionImpl({this.errorMessage});
 
   @override
   final String? errorMessage;
@@ -1005,7 +1011,7 @@ class _$_UnauthenticatedException implements _UnauthenticatedException {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_UnauthenticatedException &&
+            other is _$UnauthenticatedExceptionImpl &&
             (identical(other.errorMessage, errorMessage) ||
                 other.errorMessage == errorMessage));
   }
@@ -1016,9 +1022,9 @@ class _$_UnauthenticatedException implements _UnauthenticatedException {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UnauthenticatedExceptionCopyWith<_$_UnauthenticatedException>
-      get copyWith => __$$_UnauthenticatedExceptionCopyWithImpl<
-          _$_UnauthenticatedException>(this, _$identity);
+  _$$UnauthenticatedExceptionImplCopyWith<_$UnauthenticatedExceptionImpl>
+      get copyWith => __$$UnauthenticatedExceptionImplCopyWithImpl<
+          _$UnauthenticatedExceptionImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1130,29 +1136,29 @@ class _$_UnauthenticatedException implements _UnauthenticatedException {
 
 abstract class _UnauthenticatedException implements AppException, Exception {
   const factory _UnauthenticatedException({final String? errorMessage}) =
-      _$_UnauthenticatedException;
+      _$UnauthenticatedExceptionImpl;
 
   String? get errorMessage;
   @JsonKey(ignore: true)
-  _$$_UnauthenticatedExceptionCopyWith<_$_UnauthenticatedException>
+  _$$UnauthenticatedExceptionImplCopyWith<_$UnauthenticatedExceptionImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_EmptyExceptionCopyWith<$Res> {
-  factory _$$_EmptyExceptionCopyWith(
-          _$_EmptyException value, $Res Function(_$_EmptyException) then) =
-      __$$_EmptyExceptionCopyWithImpl<$Res>;
+abstract class _$$EmptyExceptionImplCopyWith<$Res> {
+  factory _$$EmptyExceptionImplCopyWith(_$EmptyExceptionImpl value,
+          $Res Function(_$EmptyExceptionImpl) then) =
+      __$$EmptyExceptionImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String? errorMessage});
 }
 
 /// @nodoc
-class __$$_EmptyExceptionCopyWithImpl<$Res>
-    extends _$AppExceptionCopyWithImpl<$Res, _$_EmptyException>
-    implements _$$_EmptyExceptionCopyWith<$Res> {
-  __$$_EmptyExceptionCopyWithImpl(
-      _$_EmptyException _value, $Res Function(_$_EmptyException) _then)
+class __$$EmptyExceptionImplCopyWithImpl<$Res>
+    extends _$AppExceptionCopyWithImpl<$Res, _$EmptyExceptionImpl>
+    implements _$$EmptyExceptionImplCopyWith<$Res> {
+  __$$EmptyExceptionImplCopyWithImpl(
+      _$EmptyExceptionImpl _value, $Res Function(_$EmptyExceptionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1160,7 +1166,7 @@ class __$$_EmptyExceptionCopyWithImpl<$Res>
   $Res call({
     Object? errorMessage = freezed,
   }) {
-    return _then(_$_EmptyException(
+    return _then(_$EmptyExceptionImpl(
       errorMessage: freezed == errorMessage
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
@@ -1171,8 +1177,8 @@ class __$$_EmptyExceptionCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_EmptyException implements _EmptyException {
-  const _$_EmptyException({this.errorMessage});
+class _$EmptyExceptionImpl implements _EmptyException {
+  const _$EmptyExceptionImpl({this.errorMessage});
 
   @override
   final String? errorMessage;
@@ -1186,7 +1192,7 @@ class _$_EmptyException implements _EmptyException {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EmptyException &&
+            other is _$EmptyExceptionImpl &&
             (identical(other.errorMessage, errorMessage) ||
                 other.errorMessage == errorMessage));
   }
@@ -1197,8 +1203,9 @@ class _$_EmptyException implements _EmptyException {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EmptyExceptionCopyWith<_$_EmptyException> get copyWith =>
-      __$$_EmptyExceptionCopyWithImpl<_$_EmptyException>(this, _$identity);
+  _$$EmptyExceptionImplCopyWith<_$EmptyExceptionImpl> get copyWith =>
+      __$$EmptyExceptionImplCopyWithImpl<_$EmptyExceptionImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1310,29 +1317,29 @@ class _$_EmptyException implements _EmptyException {
 
 abstract class _EmptyException implements AppException, Exception {
   const factory _EmptyException({final String? errorMessage}) =
-      _$_EmptyException;
+      _$EmptyExceptionImpl;
 
   String? get errorMessage;
   @JsonKey(ignore: true)
-  _$$_EmptyExceptionCopyWith<_$_EmptyException> get copyWith =>
+  _$$EmptyExceptionImplCopyWith<_$EmptyExceptionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_InvalidExceptionCopyWith<$Res> {
-  factory _$$_InvalidExceptionCopyWith(
-          _$_InvalidException value, $Res Function(_$_InvalidException) then) =
-      __$$_InvalidExceptionCopyWithImpl<$Res>;
+abstract class _$$InvalidExceptionImplCopyWith<$Res> {
+  factory _$$InvalidExceptionImplCopyWith(_$InvalidExceptionImpl value,
+          $Res Function(_$InvalidExceptionImpl) then) =
+      __$$InvalidExceptionImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String? errorMessage});
 }
 
 /// @nodoc
-class __$$_InvalidExceptionCopyWithImpl<$Res>
-    extends _$AppExceptionCopyWithImpl<$Res, _$_InvalidException>
-    implements _$$_InvalidExceptionCopyWith<$Res> {
-  __$$_InvalidExceptionCopyWithImpl(
-      _$_InvalidException _value, $Res Function(_$_InvalidException) _then)
+class __$$InvalidExceptionImplCopyWithImpl<$Res>
+    extends _$AppExceptionCopyWithImpl<$Res, _$InvalidExceptionImpl>
+    implements _$$InvalidExceptionImplCopyWith<$Res> {
+  __$$InvalidExceptionImplCopyWithImpl(_$InvalidExceptionImpl _value,
+      $Res Function(_$InvalidExceptionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1340,7 +1347,7 @@ class __$$_InvalidExceptionCopyWithImpl<$Res>
   $Res call({
     Object? errorMessage = freezed,
   }) {
-    return _then(_$_InvalidException(
+    return _then(_$InvalidExceptionImpl(
       errorMessage: freezed == errorMessage
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
@@ -1351,8 +1358,8 @@ class __$$_InvalidExceptionCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_InvalidException implements _InvalidException {
-  const _$_InvalidException({this.errorMessage});
+class _$InvalidExceptionImpl implements _InvalidException {
+  const _$InvalidExceptionImpl({this.errorMessage});
 
   @override
   final String? errorMessage;
@@ -1366,7 +1373,7 @@ class _$_InvalidException implements _InvalidException {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_InvalidException &&
+            other is _$InvalidExceptionImpl &&
             (identical(other.errorMessage, errorMessage) ||
                 other.errorMessage == errorMessage));
   }
@@ -1377,8 +1384,9 @@ class _$_InvalidException implements _InvalidException {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_InvalidExceptionCopyWith<_$_InvalidException> get copyWith =>
-      __$$_InvalidExceptionCopyWithImpl<_$_InvalidException>(this, _$identity);
+  _$$InvalidExceptionImplCopyWith<_$InvalidExceptionImpl> get copyWith =>
+      __$$InvalidExceptionImplCopyWithImpl<_$InvalidExceptionImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1490,29 +1498,29 @@ class _$_InvalidException implements _InvalidException {
 
 abstract class _InvalidException implements AppException, Exception {
   const factory _InvalidException({final String? errorMessage}) =
-      _$_InvalidException;
+      _$InvalidExceptionImpl;
 
   String? get errorMessage;
   @JsonKey(ignore: true)
-  _$$_InvalidExceptionCopyWith<_$_InvalidException> get copyWith =>
+  _$$InvalidExceptionImplCopyWith<_$InvalidExceptionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_CountingExceptionCopyWith<$Res> {
-  factory _$$_CountingExceptionCopyWith(_$_CountingException value,
-          $Res Function(_$_CountingException) then) =
-      __$$_CountingExceptionCopyWithImpl<$Res>;
+abstract class _$$CountingExceptionImplCopyWith<$Res> {
+  factory _$$CountingExceptionImplCopyWith(_$CountingExceptionImpl value,
+          $Res Function(_$CountingExceptionImpl) then) =
+      __$$CountingExceptionImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String? errorMessage});
 }
 
 /// @nodoc
-class __$$_CountingExceptionCopyWithImpl<$Res>
-    extends _$AppExceptionCopyWithImpl<$Res, _$_CountingException>
-    implements _$$_CountingExceptionCopyWith<$Res> {
-  __$$_CountingExceptionCopyWithImpl(
-      _$_CountingException _value, $Res Function(_$_CountingException) _then)
+class __$$CountingExceptionImplCopyWithImpl<$Res>
+    extends _$AppExceptionCopyWithImpl<$Res, _$CountingExceptionImpl>
+    implements _$$CountingExceptionImplCopyWith<$Res> {
+  __$$CountingExceptionImplCopyWithImpl(_$CountingExceptionImpl _value,
+      $Res Function(_$CountingExceptionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1520,7 +1528,7 @@ class __$$_CountingExceptionCopyWithImpl<$Res>
   $Res call({
     Object? errorMessage = freezed,
   }) {
-    return _then(_$_CountingException(
+    return _then(_$CountingExceptionImpl(
       errorMessage: freezed == errorMessage
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
@@ -1531,8 +1539,8 @@ class __$$_CountingExceptionCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_CountingException implements _CountingException {
-  const _$_CountingException({this.errorMessage});
+class _$CountingExceptionImpl implements _CountingException {
+  const _$CountingExceptionImpl({this.errorMessage});
 
   @override
   final String? errorMessage;
@@ -1546,7 +1554,7 @@ class _$_CountingException implements _CountingException {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CountingException &&
+            other is _$CountingExceptionImpl &&
             (identical(other.errorMessage, errorMessage) ||
                 other.errorMessage == errorMessage));
   }
@@ -1557,8 +1565,8 @@ class _$_CountingException implements _CountingException {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CountingExceptionCopyWith<_$_CountingException> get copyWith =>
-      __$$_CountingExceptionCopyWithImpl<_$_CountingException>(
+  _$$CountingExceptionImplCopyWith<_$CountingExceptionImpl> get copyWith =>
+      __$$CountingExceptionImplCopyWithImpl<_$CountingExceptionImpl>(
           this, _$identity);
 
   @override
@@ -1671,10 +1679,10 @@ class _$_CountingException implements _CountingException {
 
 abstract class _CountingException implements AppException, Exception {
   const factory _CountingException({final String? errorMessage}) =
-      _$_CountingException;
+      _$CountingExceptionImpl;
 
   String? get errorMessage;
   @JsonKey(ignore: true)
-  _$$_CountingExceptionCopyWith<_$_CountingException> get copyWith =>
+  _$$CountingExceptionImplCopyWith<_$CountingExceptionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

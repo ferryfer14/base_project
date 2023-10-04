@@ -7,5 +7,5 @@ final GetIt getIt = GetIt.instance;
 @injectableInit
 Future<GetIt> configureInjection(String env) async {
   getIt.registerSingleton<AppRouter>(AppRouter());
-  return $initGetIt(getIt, environment: env);
+  return getIt.init(environment: env);
 }

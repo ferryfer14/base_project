@@ -1,6 +1,4 @@
 import 'dart:convert';
-import 'dart:developer';
-
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
@@ -9,11 +7,10 @@ import 'package:standart_project/app_constant.dart';
 import 'package:standart_project/common/api/api_client.dart';
 import 'package:standart_project/common/exceptions/exceptions.dart';
 import 'package:standart_project/domain/auth/auth_failure.dart';
-import 'package:standart_project/domain/auth/auth_model.dart';
 import 'package:standart_project/env.dart';
 import 'package:standart_project/infrastructure/auth/profile_dtos.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:uuid/uuid.dart';
+// import 'package:uuid/uuid.dart';
 
 import '../auth_dtos.dart';
 
@@ -29,7 +26,7 @@ class AuthRemoteDataProvider {
     this.env,
   );
 
-  final _state = const Uuid().v1();
+  // final _state = const Uuid().v1();
 
   Future<Either<AuthFailure, Unit>> login(
       {required String username, required String password}) async {

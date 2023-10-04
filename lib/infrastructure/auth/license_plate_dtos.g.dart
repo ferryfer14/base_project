@@ -6,9 +6,9 @@ part of 'license_plate_dtos.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_LicensePlateModelDto _$$_LicensePlateModelDtoFromJson(
+_$LicensePlateModelDtoImpl _$$LicensePlateModelDtoImplFromJson(
         Map<String, dynamic> json) =>
-    _$_LicensePlateModelDto(
+    _$LicensePlateModelDtoImpl(
       id: json['id'] as int?,
       plate_number: json['plate_number'] as String?,
       barcode: json['barcode'] as String?,
@@ -18,8 +18,8 @@ _$_LicensePlateModelDto _$$_LicensePlateModelDtoFromJson(
           : MerchantModelDto.fromJson(json['merchant'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_LicensePlateModelDtoToJson(
-        _$_LicensePlateModelDto instance) =>
+Map<String, dynamic> _$$LicensePlateModelDtoImplToJson(
+        _$LicensePlateModelDtoImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'plate_number': instance.plate_number,

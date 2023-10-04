@@ -6,8 +6,8 @@ part of 'auth_dtos.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_AuthModelDto _$$_AuthModelDtoFromJson(Map<String, dynamic> json) =>
-    _$_AuthModelDto(
+_$AuthModelDtoImpl _$$AuthModelDtoImplFromJson(Map<String, dynamic> json) =>
+    _$AuthModelDtoImpl(
       access_token: json['access_token'] as String?,
       token_type: json['token_type'] as String?,
       refresh_token: json['refresh_token'] as String?,
@@ -16,7 +16,7 @@ _$_AuthModelDto _$$_AuthModelDtoFromJson(Map<String, dynamic> json) =>
       jti: json['jti'] as String?,
     );
 
-Map<String, dynamic> _$$_AuthModelDtoToJson(_$_AuthModelDto instance) =>
+Map<String, dynamic> _$$AuthModelDtoImplToJson(_$AuthModelDtoImpl instance) =>
     <String, dynamic>{
       'access_token': instance.access_token,
       'token_type': instance.token_type,

@@ -92,10 +92,11 @@ class _$AuthModelCopyWithImpl<$Res, $Val extends AuthModel>
 }
 
 /// @nodoc
-abstract class _$$_AuthModelCopyWith<$Res> implements $AuthModelCopyWith<$Res> {
-  factory _$$_AuthModelCopyWith(
-          _$_AuthModel value, $Res Function(_$_AuthModel) then) =
-      __$$_AuthModelCopyWithImpl<$Res>;
+abstract class _$$AuthModelImplCopyWith<$Res>
+    implements $AuthModelCopyWith<$Res> {
+  factory _$$AuthModelImplCopyWith(
+          _$AuthModelImpl value, $Res Function(_$AuthModelImpl) then) =
+      __$$AuthModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -108,11 +109,11 @@ abstract class _$$_AuthModelCopyWith<$Res> implements $AuthModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_AuthModelCopyWithImpl<$Res>
-    extends _$AuthModelCopyWithImpl<$Res, _$_AuthModel>
-    implements _$$_AuthModelCopyWith<$Res> {
-  __$$_AuthModelCopyWithImpl(
-      _$_AuthModel _value, $Res Function(_$_AuthModel) _then)
+class __$$AuthModelImplCopyWithImpl<$Res>
+    extends _$AuthModelCopyWithImpl<$Res, _$AuthModelImpl>
+    implements _$$AuthModelImplCopyWith<$Res> {
+  __$$AuthModelImplCopyWithImpl(
+      _$AuthModelImpl _value, $Res Function(_$AuthModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -125,7 +126,7 @@ class __$$_AuthModelCopyWithImpl<$Res>
     Object? scope = null,
     Object? jti = null,
   }) {
-    return _then(_$_AuthModel(
+    return _then(_$AuthModelImpl(
       access_token: null == access_token
           ? _value.access_token
           : access_token // ignore: cast_nullable_to_non_nullable
@@ -156,8 +157,8 @@ class __$$_AuthModelCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_AuthModel extends _AuthModel {
-  const _$_AuthModel(
+class _$AuthModelImpl extends _AuthModel {
+  const _$AuthModelImpl(
       {required this.access_token,
       required this.token_type,
       required this.refresh_token,
@@ -188,7 +189,7 @@ class _$_AuthModel extends _AuthModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AuthModel &&
+            other is _$AuthModelImpl &&
             (identical(other.access_token, access_token) ||
                 other.access_token == access_token) &&
             (identical(other.token_type, token_type) ||
@@ -208,8 +209,8 @@ class _$_AuthModel extends _AuthModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AuthModelCopyWith<_$_AuthModel> get copyWith =>
-      __$$_AuthModelCopyWithImpl<_$_AuthModel>(this, _$identity);
+  _$$AuthModelImplCopyWith<_$AuthModelImpl> get copyWith =>
+      __$$AuthModelImplCopyWithImpl<_$AuthModelImpl>(this, _$identity);
 }
 
 abstract class _AuthModel extends AuthModel {
@@ -219,7 +220,7 @@ abstract class _AuthModel extends AuthModel {
       required final StringSingleLine refresh_token,
       required final NumericId expires_in,
       required final StringSingleLine scope,
-      required final StringSingleLine jti}) = _$_AuthModel;
+      required final StringSingleLine jti}) = _$AuthModelImpl;
   const _AuthModel._() : super._();
 
   @override
@@ -236,6 +237,6 @@ abstract class _AuthModel extends AuthModel {
   StringSingleLine get jti;
   @override
   @JsonKey(ignore: true)
-  _$$_AuthModelCopyWith<_$_AuthModel> get copyWith =>
+  _$$AuthModelImplCopyWith<_$AuthModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

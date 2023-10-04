@@ -90,25 +90,25 @@ class _$AuthFailureCopyWithImpl<$Res, $Val extends AuthFailure>
 }
 
 /// @nodoc
-abstract class _$$UsernameAlreadyInUseCopyWith<$Res> {
-  factory _$$UsernameAlreadyInUseCopyWith(_$UsernameAlreadyInUse value,
-          $Res Function(_$UsernameAlreadyInUse) then) =
-      __$$UsernameAlreadyInUseCopyWithImpl<$Res>;
+abstract class _$$UsernameAlreadyInUseImplCopyWith<$Res> {
+  factory _$$UsernameAlreadyInUseImplCopyWith(_$UsernameAlreadyInUseImpl value,
+          $Res Function(_$UsernameAlreadyInUseImpl) then) =
+      __$$UsernameAlreadyInUseImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$UsernameAlreadyInUseCopyWithImpl<$Res>
-    extends _$AuthFailureCopyWithImpl<$Res, _$UsernameAlreadyInUse>
-    implements _$$UsernameAlreadyInUseCopyWith<$Res> {
-  __$$UsernameAlreadyInUseCopyWithImpl(_$UsernameAlreadyInUse _value,
-      $Res Function(_$UsernameAlreadyInUse) _then)
+class __$$UsernameAlreadyInUseImplCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res, _$UsernameAlreadyInUseImpl>
+    implements _$$UsernameAlreadyInUseImplCopyWith<$Res> {
+  __$$UsernameAlreadyInUseImplCopyWithImpl(_$UsernameAlreadyInUseImpl _value,
+      $Res Function(_$UsernameAlreadyInUseImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$UsernameAlreadyInUse implements UsernameAlreadyInUse {
-  const _$UsernameAlreadyInUse();
+class _$UsernameAlreadyInUseImpl implements UsernameAlreadyInUse {
+  const _$UsernameAlreadyInUseImpl();
 
   @override
   String toString() {
@@ -118,7 +118,8 @@ class _$UsernameAlreadyInUse implements UsernameAlreadyInUse {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$UsernameAlreadyInUse);
+        (other.runtimeType == runtimeType &&
+            other is _$UsernameAlreadyInUseImpl);
   }
 
   @override
@@ -203,31 +204,31 @@ class _$UsernameAlreadyInUse implements UsernameAlreadyInUse {
 }
 
 abstract class UsernameAlreadyInUse implements AuthFailure {
-  const factory UsernameAlreadyInUse() = _$UsernameAlreadyInUse;
+  const factory UsernameAlreadyInUse() = _$UsernameAlreadyInUseImpl;
 }
 
 /// @nodoc
-abstract class _$$InvalidUsernameAndPasswordCopyWith<$Res> {
-  factory _$$InvalidUsernameAndPasswordCopyWith(
-          _$InvalidUsernameAndPassword value,
-          $Res Function(_$InvalidUsernameAndPassword) then) =
-      __$$InvalidUsernameAndPasswordCopyWithImpl<$Res>;
+abstract class _$$InvalidUsernameAndPasswordImplCopyWith<$Res> {
+  factory _$$InvalidUsernameAndPasswordImplCopyWith(
+          _$InvalidUsernameAndPasswordImpl value,
+          $Res Function(_$InvalidUsernameAndPasswordImpl) then) =
+      __$$InvalidUsernameAndPasswordImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$InvalidUsernameAndPasswordCopyWithImpl<$Res>
-    extends _$AuthFailureCopyWithImpl<$Res, _$InvalidUsernameAndPassword>
-    implements _$$InvalidUsernameAndPasswordCopyWith<$Res> {
-  __$$InvalidUsernameAndPasswordCopyWithImpl(
-      _$InvalidUsernameAndPassword _value,
-      $Res Function(_$InvalidUsernameAndPassword) _then)
+class __$$InvalidUsernameAndPasswordImplCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res, _$InvalidUsernameAndPasswordImpl>
+    implements _$$InvalidUsernameAndPasswordImplCopyWith<$Res> {
+  __$$InvalidUsernameAndPasswordImplCopyWithImpl(
+      _$InvalidUsernameAndPasswordImpl _value,
+      $Res Function(_$InvalidUsernameAndPasswordImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$InvalidUsernameAndPassword implements InvalidUsernameAndPassword {
-  const _$InvalidUsernameAndPassword();
+class _$InvalidUsernameAndPasswordImpl implements InvalidUsernameAndPassword {
+  const _$InvalidUsernameAndPasswordImpl();
 
   @override
   String toString() {
@@ -238,7 +239,7 @@ class _$InvalidUsernameAndPassword implements InvalidUsernameAndPassword {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$InvalidUsernameAndPassword);
+            other is _$InvalidUsernameAndPasswordImpl);
   }
 
   @override
@@ -323,29 +324,29 @@ class _$InvalidUsernameAndPassword implements InvalidUsernameAndPassword {
 }
 
 abstract class InvalidUsernameAndPassword implements AuthFailure {
-  const factory InvalidUsernameAndPassword() = _$InvalidUsernameAndPassword;
+  const factory InvalidUsernameAndPassword() = _$InvalidUsernameAndPasswordImpl;
 }
 
 /// @nodoc
-abstract class _$$_UnexpectedErrorCopyWith<$Res> {
-  factory _$$_UnexpectedErrorCopyWith(
-          _$_UnexpectedError value, $Res Function(_$_UnexpectedError) then) =
-      __$$_UnexpectedErrorCopyWithImpl<$Res>;
+abstract class _$$UnexpectedErrorImplCopyWith<$Res> {
+  factory _$$UnexpectedErrorImplCopyWith(_$UnexpectedErrorImpl value,
+          $Res Function(_$UnexpectedErrorImpl) then) =
+      __$$UnexpectedErrorImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_UnexpectedErrorCopyWithImpl<$Res>
-    extends _$AuthFailureCopyWithImpl<$Res, _$_UnexpectedError>
-    implements _$$_UnexpectedErrorCopyWith<$Res> {
-  __$$_UnexpectedErrorCopyWithImpl(
-      _$_UnexpectedError _value, $Res Function(_$_UnexpectedError) _then)
+class __$$UnexpectedErrorImplCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res, _$UnexpectedErrorImpl>
+    implements _$$UnexpectedErrorImplCopyWith<$Res> {
+  __$$UnexpectedErrorImplCopyWithImpl(
+      _$UnexpectedErrorImpl _value, $Res Function(_$UnexpectedErrorImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_UnexpectedError implements _UnexpectedError {
-  const _$_UnexpectedError();
+class _$UnexpectedErrorImpl implements _UnexpectedError {
+  const _$UnexpectedErrorImpl();
 
   @override
   String toString() {
@@ -355,7 +356,7 @@ class _$_UnexpectedError implements _UnexpectedError {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_UnexpectedError);
+        (other.runtimeType == runtimeType && other is _$UnexpectedErrorImpl);
   }
 
   @override
@@ -440,14 +441,14 @@ class _$_UnexpectedError implements _UnexpectedError {
 }
 
 abstract class _UnexpectedError implements AuthFailure {
-  const factory _UnexpectedError() = _$_UnexpectedError;
+  const factory _UnexpectedError() = _$UnexpectedErrorImpl;
 }
 
 /// @nodoc
-abstract class _$$_AppExceptionCopyWith<$Res> {
-  factory _$$_AppExceptionCopyWith(
-          _$_AppException value, $Res Function(_$_AppException) then) =
-      __$$_AppExceptionCopyWithImpl<$Res>;
+abstract class _$$AppExceptionImplCopyWith<$Res> {
+  factory _$$AppExceptionImplCopyWith(
+          _$AppExceptionImpl value, $Res Function(_$AppExceptionImpl) then) =
+      __$$AppExceptionImplCopyWithImpl<$Res>;
   @useResult
   $Res call({AppException exception});
 
@@ -455,11 +456,11 @@ abstract class _$$_AppExceptionCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_AppExceptionCopyWithImpl<$Res>
-    extends _$AuthFailureCopyWithImpl<$Res, _$_AppException>
-    implements _$$_AppExceptionCopyWith<$Res> {
-  __$$_AppExceptionCopyWithImpl(
-      _$_AppException _value, $Res Function(_$_AppException) _then)
+class __$$AppExceptionImplCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res, _$AppExceptionImpl>
+    implements _$$AppExceptionImplCopyWith<$Res> {
+  __$$AppExceptionImplCopyWithImpl(
+      _$AppExceptionImpl _value, $Res Function(_$AppExceptionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -467,7 +468,7 @@ class __$$_AppExceptionCopyWithImpl<$Res>
   $Res call({
     Object? exception = null,
   }) {
-    return _then(_$_AppException(
+    return _then(_$AppExceptionImpl(
       null == exception
           ? _value.exception
           : exception // ignore: cast_nullable_to_non_nullable
@@ -486,8 +487,8 @@ class __$$_AppExceptionCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_AppException implements _AppException {
-  const _$_AppException(this.exception);
+class _$AppExceptionImpl implements _AppException {
+  const _$AppExceptionImpl(this.exception);
 
   @override
   final AppException exception;
@@ -501,7 +502,7 @@ class _$_AppException implements _AppException {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AppException &&
+            other is _$AppExceptionImpl &&
             (identical(other.exception, exception) ||
                 other.exception == exception));
   }
@@ -512,8 +513,8 @@ class _$_AppException implements _AppException {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AppExceptionCopyWith<_$_AppException> get copyWith =>
-      __$$_AppExceptionCopyWithImpl<_$_AppException>(this, _$identity);
+  _$$AppExceptionImplCopyWith<_$AppExceptionImpl> get copyWith =>
+      __$$AppExceptionImplCopyWithImpl<_$AppExceptionImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -594,10 +595,11 @@ class _$_AppException implements _AppException {
 }
 
 abstract class _AppException implements AuthFailure {
-  const factory _AppException(final AppException exception) = _$_AppException;
+  const factory _AppException(final AppException exception) =
+      _$AppExceptionImpl;
 
   AppException get exception;
   @JsonKey(ignore: true)
-  _$$_AppExceptionCopyWith<_$_AppException> get copyWith =>
+  _$$AppExceptionImplCopyWith<_$AppExceptionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

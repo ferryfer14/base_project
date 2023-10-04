@@ -99,25 +99,25 @@ class _$CabinetFailureCopyWithImpl<$Res, $Val extends CabinetFailure>
 }
 
 /// @nodoc
-abstract class _$$_ServerErrorCopyWith<$Res> {
-  factory _$$_ServerErrorCopyWith(
-          _$_ServerError value, $Res Function(_$_ServerError) then) =
-      __$$_ServerErrorCopyWithImpl<$Res>;
+abstract class _$$ServerErrorImplCopyWith<$Res> {
+  factory _$$ServerErrorImplCopyWith(
+          _$ServerErrorImpl value, $Res Function(_$ServerErrorImpl) then) =
+      __$$ServerErrorImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_ServerErrorCopyWithImpl<$Res>
-    extends _$CabinetFailureCopyWithImpl<$Res, _$_ServerError>
-    implements _$$_ServerErrorCopyWith<$Res> {
-  __$$_ServerErrorCopyWithImpl(
-      _$_ServerError _value, $Res Function(_$_ServerError) _then)
+class __$$ServerErrorImplCopyWithImpl<$Res>
+    extends _$CabinetFailureCopyWithImpl<$Res, _$ServerErrorImpl>
+    implements _$$ServerErrorImplCopyWith<$Res> {
+  __$$ServerErrorImplCopyWithImpl(
+      _$ServerErrorImpl _value, $Res Function(_$ServerErrorImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_ServerError implements _ServerError {
-  const _$_ServerError();
+class _$ServerErrorImpl implements _ServerError {
+  const _$ServerErrorImpl();
 
   @override
   String toString() {
@@ -127,7 +127,7 @@ class _$_ServerError implements _ServerError {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_ServerError);
+        (other.runtimeType == runtimeType && other is _$ServerErrorImpl);
   }
 
   @override
@@ -221,29 +221,29 @@ class _$_ServerError implements _ServerError {
 }
 
 abstract class _ServerError implements CabinetFailure {
-  const factory _ServerError() = _$_ServerError;
+  const factory _ServerError() = _$ServerErrorImpl;
 }
 
 /// @nodoc
-abstract class _$$_UnexpectedErrorCopyWith<$Res> {
-  factory _$$_UnexpectedErrorCopyWith(
-          _$_UnexpectedError value, $Res Function(_$_UnexpectedError) then) =
-      __$$_UnexpectedErrorCopyWithImpl<$Res>;
+abstract class _$$UnexpectedErrorImplCopyWith<$Res> {
+  factory _$$UnexpectedErrorImplCopyWith(_$UnexpectedErrorImpl value,
+          $Res Function(_$UnexpectedErrorImpl) then) =
+      __$$UnexpectedErrorImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_UnexpectedErrorCopyWithImpl<$Res>
-    extends _$CabinetFailureCopyWithImpl<$Res, _$_UnexpectedError>
-    implements _$$_UnexpectedErrorCopyWith<$Res> {
-  __$$_UnexpectedErrorCopyWithImpl(
-      _$_UnexpectedError _value, $Res Function(_$_UnexpectedError) _then)
+class __$$UnexpectedErrorImplCopyWithImpl<$Res>
+    extends _$CabinetFailureCopyWithImpl<$Res, _$UnexpectedErrorImpl>
+    implements _$$UnexpectedErrorImplCopyWith<$Res> {
+  __$$UnexpectedErrorImplCopyWithImpl(
+      _$UnexpectedErrorImpl _value, $Res Function(_$UnexpectedErrorImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_UnexpectedError implements _UnexpectedError {
-  const _$_UnexpectedError();
+class _$UnexpectedErrorImpl implements _UnexpectedError {
+  const _$UnexpectedErrorImpl();
 
   @override
   String toString() {
@@ -253,7 +253,7 @@ class _$_UnexpectedError implements _UnexpectedError {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_UnexpectedError);
+        (other.runtimeType == runtimeType && other is _$UnexpectedErrorImpl);
   }
 
   @override
@@ -347,29 +347,29 @@ class _$_UnexpectedError implements _UnexpectedError {
 }
 
 abstract class _UnexpectedError implements CabinetFailure {
-  const factory _UnexpectedError() = _$_UnexpectedError;
+  const factory _UnexpectedError() = _$UnexpectedErrorImpl;
 }
 
 /// @nodoc
-abstract class _$$_EmptyListCopyWith<$Res> {
-  factory _$$_EmptyListCopyWith(
-          _$_EmptyList value, $Res Function(_$_EmptyList) then) =
-      __$$_EmptyListCopyWithImpl<$Res>;
+abstract class _$$EmptyListImplCopyWith<$Res> {
+  factory _$$EmptyListImplCopyWith(
+          _$EmptyListImpl value, $Res Function(_$EmptyListImpl) then) =
+      __$$EmptyListImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_EmptyListCopyWithImpl<$Res>
-    extends _$CabinetFailureCopyWithImpl<$Res, _$_EmptyList>
-    implements _$$_EmptyListCopyWith<$Res> {
-  __$$_EmptyListCopyWithImpl(
-      _$_EmptyList _value, $Res Function(_$_EmptyList) _then)
+class __$$EmptyListImplCopyWithImpl<$Res>
+    extends _$CabinetFailureCopyWithImpl<$Res, _$EmptyListImpl>
+    implements _$$EmptyListImplCopyWith<$Res> {
+  __$$EmptyListImplCopyWithImpl(
+      _$EmptyListImpl _value, $Res Function(_$EmptyListImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_EmptyList implements _EmptyList {
-  const _$_EmptyList();
+class _$EmptyListImpl implements _EmptyList {
+  const _$EmptyListImpl();
 
   @override
   String toString() {
@@ -379,7 +379,7 @@ class _$_EmptyList implements _EmptyList {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_EmptyList);
+        (other.runtimeType == runtimeType && other is _$EmptyListImpl);
   }
 
   @override
@@ -473,29 +473,29 @@ class _$_EmptyList implements _EmptyList {
 }
 
 abstract class _EmptyList implements CabinetFailure {
-  const factory _EmptyList() = _$_EmptyList;
+  const factory _EmptyList() = _$EmptyListImpl;
 }
 
 /// @nodoc
-abstract class _$$_NotFoundCopyWith<$Res> {
-  factory _$$_NotFoundCopyWith(
-          _$_NotFound value, $Res Function(_$_NotFound) then) =
-      __$$_NotFoundCopyWithImpl<$Res>;
+abstract class _$$NotFoundImplCopyWith<$Res> {
+  factory _$$NotFoundImplCopyWith(
+          _$NotFoundImpl value, $Res Function(_$NotFoundImpl) then) =
+      __$$NotFoundImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_NotFoundCopyWithImpl<$Res>
-    extends _$CabinetFailureCopyWithImpl<$Res, _$_NotFound>
-    implements _$$_NotFoundCopyWith<$Res> {
-  __$$_NotFoundCopyWithImpl(
-      _$_NotFound _value, $Res Function(_$_NotFound) _then)
+class __$$NotFoundImplCopyWithImpl<$Res>
+    extends _$CabinetFailureCopyWithImpl<$Res, _$NotFoundImpl>
+    implements _$$NotFoundImplCopyWith<$Res> {
+  __$$NotFoundImplCopyWithImpl(
+      _$NotFoundImpl _value, $Res Function(_$NotFoundImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_NotFound implements _NotFound {
-  const _$_NotFound();
+class _$NotFoundImpl implements _NotFound {
+  const _$NotFoundImpl();
 
   @override
   String toString() {
@@ -505,7 +505,7 @@ class _$_NotFound implements _NotFound {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_NotFound);
+        (other.runtimeType == runtimeType && other is _$NotFoundImpl);
   }
 
   @override
@@ -599,29 +599,29 @@ class _$_NotFound implements _NotFound {
 }
 
 abstract class _NotFound implements CabinetFailure {
-  const factory _NotFound() = _$_NotFound;
+  const factory _NotFound() = _$NotFoundImpl;
 }
 
 /// @nodoc
-abstract class _$$_NoConnectionCopyWith<$Res> {
-  factory _$$_NoConnectionCopyWith(
-          _$_NoConnection value, $Res Function(_$_NoConnection) then) =
-      __$$_NoConnectionCopyWithImpl<$Res>;
+abstract class _$$NoConnectionImplCopyWith<$Res> {
+  factory _$$NoConnectionImplCopyWith(
+          _$NoConnectionImpl value, $Res Function(_$NoConnectionImpl) then) =
+      __$$NoConnectionImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_NoConnectionCopyWithImpl<$Res>
-    extends _$CabinetFailureCopyWithImpl<$Res, _$_NoConnection>
-    implements _$$_NoConnectionCopyWith<$Res> {
-  __$$_NoConnectionCopyWithImpl(
-      _$_NoConnection _value, $Res Function(_$_NoConnection) _then)
+class __$$NoConnectionImplCopyWithImpl<$Res>
+    extends _$CabinetFailureCopyWithImpl<$Res, _$NoConnectionImpl>
+    implements _$$NoConnectionImplCopyWith<$Res> {
+  __$$NoConnectionImplCopyWithImpl(
+      _$NoConnectionImpl _value, $Res Function(_$NoConnectionImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_NoConnection implements _NoConnection {
-  const _$_NoConnection();
+class _$NoConnectionImpl implements _NoConnection {
+  const _$NoConnectionImpl();
 
   @override
   String toString() {
@@ -631,7 +631,7 @@ class _$_NoConnection implements _NoConnection {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_NoConnection);
+        (other.runtimeType == runtimeType && other is _$NoConnectionImpl);
   }
 
   @override
@@ -725,14 +725,14 @@ class _$_NoConnection implements _NoConnection {
 }
 
 abstract class _NoConnection implements CabinetFailure {
-  const factory _NoConnection() = _$_NoConnection;
+  const factory _NoConnection() = _$NoConnectionImpl;
 }
 
 /// @nodoc
-abstract class _$$_AppExceptionCopyWith<$Res> {
-  factory _$$_AppExceptionCopyWith(
-          _$_AppException value, $Res Function(_$_AppException) then) =
-      __$$_AppExceptionCopyWithImpl<$Res>;
+abstract class _$$AppExceptionImplCopyWith<$Res> {
+  factory _$$AppExceptionImplCopyWith(
+          _$AppExceptionImpl value, $Res Function(_$AppExceptionImpl) then) =
+      __$$AppExceptionImplCopyWithImpl<$Res>;
   @useResult
   $Res call({AppException exception});
 
@@ -740,11 +740,11 @@ abstract class _$$_AppExceptionCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_AppExceptionCopyWithImpl<$Res>
-    extends _$CabinetFailureCopyWithImpl<$Res, _$_AppException>
-    implements _$$_AppExceptionCopyWith<$Res> {
-  __$$_AppExceptionCopyWithImpl(
-      _$_AppException _value, $Res Function(_$_AppException) _then)
+class __$$AppExceptionImplCopyWithImpl<$Res>
+    extends _$CabinetFailureCopyWithImpl<$Res, _$AppExceptionImpl>
+    implements _$$AppExceptionImplCopyWith<$Res> {
+  __$$AppExceptionImplCopyWithImpl(
+      _$AppExceptionImpl _value, $Res Function(_$AppExceptionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -752,7 +752,7 @@ class __$$_AppExceptionCopyWithImpl<$Res>
   $Res call({
     Object? exception = null,
   }) {
-    return _then(_$_AppException(
+    return _then(_$AppExceptionImpl(
       null == exception
           ? _value.exception
           : exception // ignore: cast_nullable_to_non_nullable
@@ -771,8 +771,8 @@ class __$$_AppExceptionCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_AppException implements _AppException {
-  const _$_AppException(this.exception);
+class _$AppExceptionImpl implements _AppException {
+  const _$AppExceptionImpl(this.exception);
 
   @override
   final AppException exception;
@@ -786,7 +786,7 @@ class _$_AppException implements _AppException {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AppException &&
+            other is _$AppExceptionImpl &&
             (identical(other.exception, exception) ||
                 other.exception == exception));
   }
@@ -797,8 +797,8 @@ class _$_AppException implements _AppException {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AppExceptionCopyWith<_$_AppException> get copyWith =>
-      __$$_AppExceptionCopyWithImpl<_$_AppException>(this, _$identity);
+  _$$AppExceptionImplCopyWith<_$AppExceptionImpl> get copyWith =>
+      __$$AppExceptionImplCopyWithImpl<_$AppExceptionImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -888,10 +888,11 @@ class _$_AppException implements _AppException {
 }
 
 abstract class _AppException implements CabinetFailure {
-  const factory _AppException(final AppException exception) = _$_AppException;
+  const factory _AppException(final AppException exception) =
+      _$AppExceptionImpl;
 
   AppException get exception;
   @JsonKey(ignore: true)
-  _$$_AppExceptionCopyWith<_$_AppException> get copyWith =>
+  _$$AppExceptionImplCopyWith<_$AppExceptionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

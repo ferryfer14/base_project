@@ -6,8 +6,9 @@ part of 'profile_dtos.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ProfileModelDto _$$_ProfileModelDtoFromJson(Map<String, dynamic> json) =>
-    _$_ProfileModelDto(
+_$ProfileModelDtoImpl _$$ProfileModelDtoImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ProfileModelDtoImpl(
       id: json['id'] as int?,
       username: json['username'] as String?,
       license_plate: json['license_plate'] == null
@@ -19,7 +20,8 @@ _$_ProfileModelDto _$$_ProfileModelDtoFromJson(Map<String, dynamic> json) =>
           : MerchantModelDto.fromJson(json['merchant'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ProfileModelDtoToJson(_$_ProfileModelDto instance) =>
+Map<String, dynamic> _$$ProfileModelDtoImplToJson(
+        _$ProfileModelDtoImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'username': instance.username,

@@ -1,4 +1,3 @@
-import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
 import 'package:standart_project/presentation/components/gen/colors.gen.dart';
 import 'package:standart_project/presentation/core/utils/styles/text_style.dart';

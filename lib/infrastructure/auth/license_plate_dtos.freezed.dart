@@ -111,11 +111,11 @@ class _$LicensePlateModelDtoCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_LicensePlateModelDtoCopyWith<$Res>
+abstract class _$$LicensePlateModelDtoImplCopyWith<$Res>
     implements $LicensePlateModelDtoCopyWith<$Res> {
-  factory _$$_LicensePlateModelDtoCopyWith(_$_LicensePlateModelDto value,
-          $Res Function(_$_LicensePlateModelDto) then) =
-      __$$_LicensePlateModelDtoCopyWithImpl<$Res>;
+  factory _$$LicensePlateModelDtoImplCopyWith(_$LicensePlateModelDtoImpl value,
+          $Res Function(_$LicensePlateModelDtoImpl) then) =
+      __$$LicensePlateModelDtoImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -130,11 +130,11 @@ abstract class _$$_LicensePlateModelDtoCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_LicensePlateModelDtoCopyWithImpl<$Res>
-    extends _$LicensePlateModelDtoCopyWithImpl<$Res, _$_LicensePlateModelDto>
-    implements _$$_LicensePlateModelDtoCopyWith<$Res> {
-  __$$_LicensePlateModelDtoCopyWithImpl(_$_LicensePlateModelDto _value,
-      $Res Function(_$_LicensePlateModelDto) _then)
+class __$$LicensePlateModelDtoImplCopyWithImpl<$Res>
+    extends _$LicensePlateModelDtoCopyWithImpl<$Res, _$LicensePlateModelDtoImpl>
+    implements _$$LicensePlateModelDtoImplCopyWith<$Res> {
+  __$$LicensePlateModelDtoImplCopyWithImpl(_$LicensePlateModelDtoImpl _value,
+      $Res Function(_$LicensePlateModelDtoImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -146,7 +146,7 @@ class __$$_LicensePlateModelDtoCopyWithImpl<$Res>
     Object? battery_type = freezed,
     Object? merchant = freezed,
   }) {
-    return _then(_$_LicensePlateModelDto(
+    return _then(_$LicensePlateModelDtoImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -173,8 +173,8 @@ class __$$_LicensePlateModelDtoCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_LicensePlateModelDto extends _LicensePlateModelDto {
-  const _$_LicensePlateModelDto(
+class _$LicensePlateModelDtoImpl extends _LicensePlateModelDto {
+  const _$LicensePlateModelDtoImpl(
       {@JsonKey(name: 'id') this.id,
       @JsonKey(name: 'plate_number') this.plate_number,
       @JsonKey(name: 'barcode') this.barcode,
@@ -182,8 +182,8 @@ class _$_LicensePlateModelDto extends _LicensePlateModelDto {
       @JsonKey(name: 'merchant') this.merchant})
       : super._();
 
-  factory _$_LicensePlateModelDto.fromJson(Map<String, dynamic> json) =>
-      _$$_LicensePlateModelDtoFromJson(json);
+  factory _$LicensePlateModelDtoImpl.fromJson(Map<String, dynamic> json) =>
+      _$$LicensePlateModelDtoImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -210,7 +210,7 @@ class _$_LicensePlateModelDto extends _LicensePlateModelDto {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LicensePlateModelDto &&
+            other is _$LicensePlateModelDtoImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.plate_number, plate_number) ||
                 other.plate_number == plate_number) &&
@@ -229,13 +229,14 @@ class _$_LicensePlateModelDto extends _LicensePlateModelDto {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LicensePlateModelDtoCopyWith<_$_LicensePlateModelDto> get copyWith =>
-      __$$_LicensePlateModelDtoCopyWithImpl<_$_LicensePlateModelDto>(
-          this, _$identity);
+  _$$LicensePlateModelDtoImplCopyWith<_$LicensePlateModelDtoImpl>
+      get copyWith =>
+          __$$LicensePlateModelDtoImplCopyWithImpl<_$LicensePlateModelDtoImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LicensePlateModelDtoToJson(
+    return _$$LicensePlateModelDtoImplToJson(
       this,
     );
   }
@@ -248,11 +249,11 @@ abstract class _LicensePlateModelDto extends LicensePlateModelDto {
           @JsonKey(name: 'barcode') final String? barcode,
           @JsonKey(name: 'battery_type') final String? battery_type,
           @JsonKey(name: 'merchant') final MerchantModelDto? merchant}) =
-      _$_LicensePlateModelDto;
+      _$LicensePlateModelDtoImpl;
   const _LicensePlateModelDto._() : super._();
 
   factory _LicensePlateModelDto.fromJson(Map<String, dynamic> json) =
-      _$_LicensePlateModelDto.fromJson;
+      _$LicensePlateModelDtoImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -271,6 +272,6 @@ abstract class _LicensePlateModelDto extends LicensePlateModelDto {
   MerchantModelDto? get merchant;
   @override
   @JsonKey(ignore: true)
-  _$$_LicensePlateModelDtoCopyWith<_$_LicensePlateModelDto> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$LicensePlateModelDtoImplCopyWith<_$LicensePlateModelDtoImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

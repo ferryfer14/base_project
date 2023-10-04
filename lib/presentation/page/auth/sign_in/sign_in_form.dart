@@ -1,13 +1,10 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:standart_project/presentation/components/gen/colors.gen.dart';
 import 'package:standart_project/presentation/core/utils/styles/text_style.dart';
 import 'package:text_field/text_field.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../application/auth/sign_in/sign_in_bloc.dart';
 import '../../../components/button/button_icon_leading.dart';
@@ -90,6 +87,7 @@ class SignInForm extends StatelessWidget {
                               .username_not_valid;
                         }
                       }
+                      return null;
                     },
                   ),
                   siboh20,
@@ -119,6 +117,7 @@ class SignInForm extends StatelessWidget {
                               .password_not_valid;
                         }
                       }
+                      return null;
                     },
                   ),
                   siboh20,

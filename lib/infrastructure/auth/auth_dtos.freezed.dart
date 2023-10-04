@@ -104,11 +104,11 @@ class _$AuthModelDtoCopyWithImpl<$Res, $Val extends AuthModelDto>
 }
 
 /// @nodoc
-abstract class _$$_AuthModelDtoCopyWith<$Res>
+abstract class _$$AuthModelDtoImplCopyWith<$Res>
     implements $AuthModelDtoCopyWith<$Res> {
-  factory _$$_AuthModelDtoCopyWith(
-          _$_AuthModelDto value, $Res Function(_$_AuthModelDto) then) =
-      __$$_AuthModelDtoCopyWithImpl<$Res>;
+  factory _$$AuthModelDtoImplCopyWith(
+          _$AuthModelDtoImpl value, $Res Function(_$AuthModelDtoImpl) then) =
+      __$$AuthModelDtoImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -121,11 +121,11 @@ abstract class _$$_AuthModelDtoCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AuthModelDtoCopyWithImpl<$Res>
-    extends _$AuthModelDtoCopyWithImpl<$Res, _$_AuthModelDto>
-    implements _$$_AuthModelDtoCopyWith<$Res> {
-  __$$_AuthModelDtoCopyWithImpl(
-      _$_AuthModelDto _value, $Res Function(_$_AuthModelDto) _then)
+class __$$AuthModelDtoImplCopyWithImpl<$Res>
+    extends _$AuthModelDtoCopyWithImpl<$Res, _$AuthModelDtoImpl>
+    implements _$$AuthModelDtoImplCopyWith<$Res> {
+  __$$AuthModelDtoImplCopyWithImpl(
+      _$AuthModelDtoImpl _value, $Res Function(_$AuthModelDtoImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -138,7 +138,7 @@ class __$$_AuthModelDtoCopyWithImpl<$Res>
     Object? scope = freezed,
     Object? jti = freezed,
   }) {
-    return _then(_$_AuthModelDto(
+    return _then(_$AuthModelDtoImpl(
       access_token: freezed == access_token
           ? _value.access_token
           : access_token // ignore: cast_nullable_to_non_nullable
@@ -169,8 +169,8 @@ class __$$_AuthModelDtoCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AuthModelDto extends _AuthModelDto {
-  const _$_AuthModelDto(
+class _$AuthModelDtoImpl extends _AuthModelDto {
+  const _$AuthModelDtoImpl(
       {@JsonKey(name: 'access_token') this.access_token,
       @JsonKey(name: 'token_type') this.token_type,
       @JsonKey(name: 'refresh_token') this.refresh_token,
@@ -179,8 +179,8 @@ class _$_AuthModelDto extends _AuthModelDto {
       @JsonKey(name: 'jti') this.jti})
       : super._();
 
-  factory _$_AuthModelDto.fromJson(Map<String, dynamic> json) =>
-      _$$_AuthModelDtoFromJson(json);
+  factory _$AuthModelDtoImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AuthModelDtoImplFromJson(json);
 
   @override
   @JsonKey(name: 'access_token')
@@ -210,7 +210,7 @@ class _$_AuthModelDto extends _AuthModelDto {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AuthModelDto &&
+            other is _$AuthModelDtoImpl &&
             (identical(other.access_token, access_token) ||
                 other.access_token == access_token) &&
             (identical(other.token_type, token_type) ||
@@ -231,12 +231,12 @@ class _$_AuthModelDto extends _AuthModelDto {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AuthModelDtoCopyWith<_$_AuthModelDto> get copyWith =>
-      __$$_AuthModelDtoCopyWithImpl<_$_AuthModelDto>(this, _$identity);
+  _$$AuthModelDtoImplCopyWith<_$AuthModelDtoImpl> get copyWith =>
+      __$$AuthModelDtoImplCopyWithImpl<_$AuthModelDtoImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AuthModelDtoToJson(
+    return _$$AuthModelDtoImplToJson(
       this,
     );
   }
@@ -249,11 +249,11 @@ abstract class _AuthModelDto extends AuthModelDto {
       @JsonKey(name: 'refresh_token') final String? refresh_token,
       @JsonKey(name: 'expires_in') final int? expires_in,
       @JsonKey(name: 'scope') final String? scope,
-      @JsonKey(name: 'jti') final String? jti}) = _$_AuthModelDto;
+      @JsonKey(name: 'jti') final String? jti}) = _$AuthModelDtoImpl;
   const _AuthModelDto._() : super._();
 
   factory _AuthModelDto.fromJson(Map<String, dynamic> json) =
-      _$_AuthModelDto.fromJson;
+      _$AuthModelDtoImpl.fromJson;
 
   @override
   @JsonKey(name: 'access_token')
@@ -275,6 +275,6 @@ abstract class _AuthModelDto extends AuthModelDto {
   String? get jti;
   @override
   @JsonKey(ignore: true)
-  _$$_AuthModelDtoCopyWith<_$_AuthModelDto> get copyWith =>
+  _$$AuthModelDtoImplCopyWith<_$AuthModelDtoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

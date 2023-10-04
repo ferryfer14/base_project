@@ -1,4 +1,4 @@
-package com.example.standart_project
+package com.monstercode.flutter.core
 
 import io.flutter.embedding.android.FlutterActivity
 

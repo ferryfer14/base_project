@@ -88,11 +88,11 @@ class _$MerchantModelDtoCopyWithImpl<$Res, $Val extends MerchantModelDto>
 }
 
 /// @nodoc
-abstract class _$$_MerchantModelDtoCopyWith<$Res>
+abstract class _$$MerchantModelDtoImplCopyWith<$Res>
     implements $MerchantModelDtoCopyWith<$Res> {
-  factory _$$_MerchantModelDtoCopyWith(
-          _$_MerchantModelDto value, $Res Function(_$_MerchantModelDto) then) =
-      __$$_MerchantModelDtoCopyWithImpl<$Res>;
+  factory _$$MerchantModelDtoImplCopyWith(_$MerchantModelDtoImpl value,
+          $Res Function(_$MerchantModelDtoImpl) then) =
+      __$$MerchantModelDtoImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -103,11 +103,11 @@ abstract class _$$_MerchantModelDtoCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MerchantModelDtoCopyWithImpl<$Res>
-    extends _$MerchantModelDtoCopyWithImpl<$Res, _$_MerchantModelDto>
-    implements _$$_MerchantModelDtoCopyWith<$Res> {
-  __$$_MerchantModelDtoCopyWithImpl(
-      _$_MerchantModelDto _value, $Res Function(_$_MerchantModelDto) _then)
+class __$$MerchantModelDtoImplCopyWithImpl<$Res>
+    extends _$MerchantModelDtoCopyWithImpl<$Res, _$MerchantModelDtoImpl>
+    implements _$$MerchantModelDtoImplCopyWith<$Res> {
+  __$$MerchantModelDtoImplCopyWithImpl(_$MerchantModelDtoImpl _value,
+      $Res Function(_$MerchantModelDtoImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -118,7 +118,7 @@ class __$$_MerchantModelDtoCopyWithImpl<$Res>
     Object? merchant_name = freezed,
     Object? status = freezed,
   }) {
-    return _then(_$_MerchantModelDto(
+    return _then(_$MerchantModelDtoImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -141,16 +141,16 @@ class __$$_MerchantModelDtoCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MerchantModelDto extends _MerchantModelDto {
-  const _$_MerchantModelDto(
+class _$MerchantModelDtoImpl extends _MerchantModelDto {
+  const _$MerchantModelDtoImpl(
       {@JsonKey(name: 'id') this.id,
       @JsonKey(name: 'merchant_id') this.merchant_id,
       @JsonKey(name: 'merchant_name') this.merchant_name,
       @JsonKey(name: 'status') this.status})
       : super._();
 
-  factory _$_MerchantModelDto.fromJson(Map<String, dynamic> json) =>
-      _$$_MerchantModelDtoFromJson(json);
+  factory _$MerchantModelDtoImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MerchantModelDtoImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -174,7 +174,7 @@ class _$_MerchantModelDto extends _MerchantModelDto {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MerchantModelDto &&
+            other is _$MerchantModelDtoImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.merchant_id, merchant_id) ||
                 other.merchant_id == merchant_id) &&
@@ -191,12 +191,13 @@ class _$_MerchantModelDto extends _MerchantModelDto {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MerchantModelDtoCopyWith<_$_MerchantModelDto> get copyWith =>
-      __$$_MerchantModelDtoCopyWithImpl<_$_MerchantModelDto>(this, _$identity);
+  _$$MerchantModelDtoImplCopyWith<_$MerchantModelDtoImpl> get copyWith =>
+      __$$MerchantModelDtoImplCopyWithImpl<_$MerchantModelDtoImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MerchantModelDtoToJson(
+    return _$$MerchantModelDtoImplToJson(
       this,
     );
   }
@@ -207,11 +208,11 @@ abstract class _MerchantModelDto extends MerchantModelDto {
       {@JsonKey(name: 'id') final int? id,
       @JsonKey(name: 'merchant_id') final String? merchant_id,
       @JsonKey(name: 'merchant_name') final String? merchant_name,
-      @JsonKey(name: 'status') final bool? status}) = _$_MerchantModelDto;
+      @JsonKey(name: 'status') final bool? status}) = _$MerchantModelDtoImpl;
   const _MerchantModelDto._() : super._();
 
   factory _MerchantModelDto.fromJson(Map<String, dynamic> json) =
-      _$_MerchantModelDto.fromJson;
+      _$MerchantModelDtoImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -227,6 +228,6 @@ abstract class _MerchantModelDto extends MerchantModelDto {
   bool? get status;
   @override
   @JsonKey(ignore: true)
-  _$$_MerchantModelDtoCopyWith<_$_MerchantModelDto> get copyWith =>
+  _$$MerchantModelDtoImplCopyWith<_$MerchantModelDtoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

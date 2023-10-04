@@ -1,7 +1,6 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
-import 'package:standart_project/injection.dart';
-import 'package:standart_project/routes/app_router.dart';
+// import 'package:standart_project/injection.dart';
+// import 'package:standart_project/routes/app_router.dart';
 
 class NotificationController {
   /// Use this method to detect when the user taps on a notification or action button
@@ -10,14 +9,14 @@ class NotificationController {
       ReceivedAction receivedAction) async {
     // Your code goes here
 
-    final router = getIt<AppRouter>();
+    // final router = getIt<AppRouter>();
 
     /// Handles regular notification taps.
     if (receivedAction.actionType == ActionType.Default) {
       if (receivedAction.payload!.isNotEmpty) {
         final payload = receivedAction.payload!;
         if (payload['screen'] == 'transaction') {
-          router.push(const SignInRoute());
+          // router.push(const SignInRoute());
         }
       }
     }

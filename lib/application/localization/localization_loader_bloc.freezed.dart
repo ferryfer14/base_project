@@ -76,19 +76,20 @@ class _$LocalizationLoaderEventCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_StartedCopyWith<$Res> {
-  factory _$$_StartedCopyWith(
-          _$_Started value, $Res Function(_$_Started) then) =
-      __$$_StartedCopyWithImpl<$Res>;
+abstract class _$$StartedImplCopyWith<$Res> {
+  factory _$$StartedImplCopyWith(
+          _$StartedImpl value, $Res Function(_$StartedImpl) then) =
+      __$$StartedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({bool isRefresh});
 }
 
 /// @nodoc
-class __$$_StartedCopyWithImpl<$Res>
-    extends _$LocalizationLoaderEventCopyWithImpl<$Res, _$_Started>
-    implements _$$_StartedCopyWith<$Res> {
-  __$$_StartedCopyWithImpl(_$_Started _value, $Res Function(_$_Started) _then)
+class __$$StartedImplCopyWithImpl<$Res>
+    extends _$LocalizationLoaderEventCopyWithImpl<$Res, _$StartedImpl>
+    implements _$$StartedImplCopyWith<$Res> {
+  __$$StartedImplCopyWithImpl(
+      _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -96,7 +97,7 @@ class __$$_StartedCopyWithImpl<$Res>
   $Res call({
     Object? isRefresh = null,
   }) {
-    return _then(_$_Started(
+    return _then(_$StartedImpl(
       isRefresh: null == isRefresh
           ? _value.isRefresh
           : isRefresh // ignore: cast_nullable_to_non_nullable
@@ -107,8 +108,8 @@ class __$$_StartedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Started implements _Started {
-  const _$_Started({this.isRefresh = false});
+class _$StartedImpl implements _Started {
+  const _$StartedImpl({this.isRefresh = false});
 
   @override
   @JsonKey()
@@ -123,7 +124,7 @@ class _$_Started implements _Started {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Started &&
+            other is _$StartedImpl &&
             (identical(other.isRefresh, isRefresh) ||
                 other.isRefresh == isRefresh));
   }
@@ -134,8 +135,8 @@ class _$_Started implements _Started {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_StartedCopyWith<_$_Started> get copyWith =>
-      __$$_StartedCopyWithImpl<_$_Started>(this, _$identity);
+  _$$StartedImplCopyWith<_$StartedImpl> get copyWith =>
+      __$$StartedImplCopyWithImpl<_$StartedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -201,29 +202,29 @@ class _$_Started implements _Started {
 }
 
 abstract class _Started implements LocalizationLoaderEvent {
-  const factory _Started({final bool isRefresh}) = _$_Started;
+  const factory _Started({final bool isRefresh}) = _$StartedImpl;
 
   bool get isRefresh;
   @JsonKey(ignore: true)
-  _$$_StartedCopyWith<_$_Started> get copyWith =>
+  _$$StartedImplCopyWith<_$StartedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_LocaleChangedCopyWith<$Res> {
-  factory _$$_LocaleChangedCopyWith(
-          _$_LocaleChanged value, $Res Function(_$_LocaleChanged) then) =
-      __$$_LocaleChangedCopyWithImpl<$Res>;
+abstract class _$$LocaleChangedImplCopyWith<$Res> {
+  factory _$$LocaleChangedImplCopyWith(
+          _$LocaleChangedImpl value, $Res Function(_$LocaleChangedImpl) then) =
+      __$$LocaleChangedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String locale});
 }
 
 /// @nodoc
-class __$$_LocaleChangedCopyWithImpl<$Res>
-    extends _$LocalizationLoaderEventCopyWithImpl<$Res, _$_LocaleChanged>
-    implements _$$_LocaleChangedCopyWith<$Res> {
-  __$$_LocaleChangedCopyWithImpl(
-      _$_LocaleChanged _value, $Res Function(_$_LocaleChanged) _then)
+class __$$LocaleChangedImplCopyWithImpl<$Res>
+    extends _$LocalizationLoaderEventCopyWithImpl<$Res, _$LocaleChangedImpl>
+    implements _$$LocaleChangedImplCopyWith<$Res> {
+  __$$LocaleChangedImplCopyWithImpl(
+      _$LocaleChangedImpl _value, $Res Function(_$LocaleChangedImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -231,7 +232,7 @@ class __$$_LocaleChangedCopyWithImpl<$Res>
   $Res call({
     Object? locale = null,
   }) {
-    return _then(_$_LocaleChanged(
+    return _then(_$LocaleChangedImpl(
       null == locale
           ? _value.locale
           : locale // ignore: cast_nullable_to_non_nullable
@@ -242,8 +243,8 @@ class __$$_LocaleChangedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_LocaleChanged implements _LocaleChanged {
-  const _$_LocaleChanged(this.locale);
+class _$LocaleChangedImpl implements _LocaleChanged {
+  const _$LocaleChangedImpl(this.locale);
 
   @override
   final String locale;
@@ -257,7 +258,7 @@ class _$_LocaleChanged implements _LocaleChanged {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LocaleChanged &&
+            other is _$LocaleChangedImpl &&
             (identical(other.locale, locale) || other.locale == locale));
   }
 
@@ -267,8 +268,8 @@ class _$_LocaleChanged implements _LocaleChanged {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LocaleChangedCopyWith<_$_LocaleChanged> get copyWith =>
-      __$$_LocaleChangedCopyWithImpl<_$_LocaleChanged>(this, _$identity);
+  _$$LocaleChangedImplCopyWith<_$LocaleChangedImpl> get copyWith =>
+      __$$LocaleChangedImplCopyWithImpl<_$LocaleChangedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -334,11 +335,11 @@ class _$_LocaleChanged implements _LocaleChanged {
 }
 
 abstract class _LocaleChanged implements LocalizationLoaderEvent {
-  const factory _LocaleChanged(final String locale) = _$_LocaleChanged;
+  const factory _LocaleChanged(final String locale) = _$LocaleChangedImpl;
 
   String get locale;
   @JsonKey(ignore: true)
-  _$$_LocaleChangedCopyWith<_$_LocaleChanged> get copyWith =>
+  _$$LocaleChangedImplCopyWith<_$LocaleChangedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -398,23 +399,25 @@ class _$LocalizationLoaderStateCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_LocalizationLoaderStateCopyWith<$Res>
+abstract class _$$LocalizationLoaderStateImplCopyWith<$Res>
     implements $LocalizationLoaderStateCopyWith<$Res> {
-  factory _$$_LocalizationLoaderStateCopyWith(_$_LocalizationLoaderState value,
-          $Res Function(_$_LocalizationLoaderState) then) =
-      __$$_LocalizationLoaderStateCopyWithImpl<$Res>;
+  factory _$$LocalizationLoaderStateImplCopyWith(
+          _$LocalizationLoaderStateImpl value,
+          $Res Function(_$LocalizationLoaderStateImpl) then) =
+      __$$LocalizationLoaderStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String located, String version, bool isLoading});
 }
 
 /// @nodoc
-class __$$_LocalizationLoaderStateCopyWithImpl<$Res>
+class __$$LocalizationLoaderStateImplCopyWithImpl<$Res>
     extends _$LocalizationLoaderStateCopyWithImpl<$Res,
-        _$_LocalizationLoaderState>
-    implements _$$_LocalizationLoaderStateCopyWith<$Res> {
-  __$$_LocalizationLoaderStateCopyWithImpl(_$_LocalizationLoaderState _value,
-      $Res Function(_$_LocalizationLoaderState) _then)
+        _$LocalizationLoaderStateImpl>
+    implements _$$LocalizationLoaderStateImplCopyWith<$Res> {
+  __$$LocalizationLoaderStateImplCopyWithImpl(
+      _$LocalizationLoaderStateImpl _value,
+      $Res Function(_$LocalizationLoaderStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -424,7 +427,7 @@ class __$$_LocalizationLoaderStateCopyWithImpl<$Res>
     Object? version = null,
     Object? isLoading = null,
   }) {
-    return _then(_$_LocalizationLoaderState(
+    return _then(_$LocalizationLoaderStateImpl(
       located: null == located
           ? _value.located
           : located // ignore: cast_nullable_to_non_nullable
@@ -443,8 +446,8 @@ class __$$_LocalizationLoaderStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_LocalizationLoaderState implements _LocalizationLoaderState {
-  const _$_LocalizationLoaderState(
+class _$LocalizationLoaderStateImpl implements _LocalizationLoaderState {
+  const _$LocalizationLoaderStateImpl(
       {required this.located, required this.version, required this.isLoading});
 
   @override
@@ -463,7 +466,7 @@ class _$_LocalizationLoaderState implements _LocalizationLoaderState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LocalizationLoaderState &&
+            other is _$LocalizationLoaderStateImpl &&
             (identical(other.located, located) || other.located == located) &&
             (identical(other.version, version) || other.version == version) &&
             (identical(other.isLoading, isLoading) ||
@@ -476,17 +479,16 @@ class _$_LocalizationLoaderState implements _LocalizationLoaderState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LocalizationLoaderStateCopyWith<_$_LocalizationLoaderState>
-      get copyWith =>
-          __$$_LocalizationLoaderStateCopyWithImpl<_$_LocalizationLoaderState>(
-              this, _$identity);
+  _$$LocalizationLoaderStateImplCopyWith<_$LocalizationLoaderStateImpl>
+      get copyWith => __$$LocalizationLoaderStateImplCopyWithImpl<
+          _$LocalizationLoaderStateImpl>(this, _$identity);
 }
 
 abstract class _LocalizationLoaderState implements LocalizationLoaderState {
   const factory _LocalizationLoaderState(
       {required final String located,
       required final String version,
-      required final bool isLoading}) = _$_LocalizationLoaderState;
+      required final bool isLoading}) = _$LocalizationLoaderStateImpl;
 
   @override
   String get located;
@@ -496,6 +498,6 @@ abstract class _LocalizationLoaderState implements LocalizationLoaderState {
   bool get isLoading;
   @override
   @JsonKey(ignore: true)
-  _$$_LocalizationLoaderStateCopyWith<_$_LocalizationLoaderState>
+  _$$LocalizationLoaderStateImplCopyWith<_$LocalizationLoaderStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

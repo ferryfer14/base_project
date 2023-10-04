@@ -135,11 +135,11 @@ class _$CabinetModelCopyWithImpl<$Res, $Val extends CabinetModel>
 }
 
 /// @nodoc
-abstract class _$$_CabinetModelCopyWith<$Res>
+abstract class _$$CabinetModelImplCopyWith<$Res>
     implements $CabinetModelCopyWith<$Res> {
-  factory _$$_CabinetModelCopyWith(
-          _$_CabinetModel value, $Res Function(_$_CabinetModel) then) =
-      __$$_CabinetModelCopyWithImpl<$Res>;
+  factory _$$CabinetModelImplCopyWith(
+          _$CabinetModelImpl value, $Res Function(_$CabinetModelImpl) then) =
+      __$$CabinetModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -158,11 +158,11 @@ abstract class _$$_CabinetModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CabinetModelCopyWithImpl<$Res>
-    extends _$CabinetModelCopyWithImpl<$Res, _$_CabinetModel>
-    implements _$$_CabinetModelCopyWith<$Res> {
-  __$$_CabinetModelCopyWithImpl(
-      _$_CabinetModel _value, $Res Function(_$_CabinetModel) _then)
+class __$$CabinetModelImplCopyWithImpl<$Res>
+    extends _$CabinetModelCopyWithImpl<$Res, _$CabinetModelImpl>
+    implements _$$CabinetModelImplCopyWith<$Res> {
+  __$$CabinetModelImplCopyWithImpl(
+      _$CabinetModelImpl _value, $Res Function(_$CabinetModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -181,7 +181,7 @@ class __$$_CabinetModelCopyWithImpl<$Res>
     Object? longitude = freezed,
     Object? slots = freezed,
   }) {
-    return _then(_$_CabinetModel(
+    return _then(_$CabinetModelImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -236,8 +236,8 @@ class __$$_CabinetModelCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_CabinetModel extends _CabinetModel {
-  const _$_CabinetModel(
+class _$CabinetModelImpl extends _CabinetModel {
+  const _$CabinetModelImpl(
       {this.id,
       this.cabinet_id,
       this.cabinet_name,
@@ -294,7 +294,7 @@ class _$_CabinetModel extends _CabinetModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CabinetModel &&
+            other is _$CabinetModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.cabinet_id, cabinet_id) ||
                 other.cabinet_id == cabinet_id) &&
@@ -335,8 +335,8 @@ class _$_CabinetModel extends _CabinetModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CabinetModelCopyWith<_$_CabinetModel> get copyWith =>
-      __$$_CabinetModelCopyWithImpl<_$_CabinetModel>(this, _$identity);
+  _$$CabinetModelImplCopyWith<_$CabinetModelImpl> get copyWith =>
+      __$$CabinetModelImplCopyWithImpl<_$CabinetModelImpl>(this, _$identity);
 }
 
 abstract class _CabinetModel extends CabinetModel {
@@ -352,7 +352,7 @@ abstract class _CabinetModel extends CabinetModel {
       final bool? status,
       final double? latitude,
       final double? longitude,
-      final List<SlotModel>? slots}) = _$_CabinetModel;
+      final List<SlotModel>? slots}) = _$CabinetModelImpl;
   const _CabinetModel._() : super._();
 
   @override
@@ -381,6 +381,6 @@ abstract class _CabinetModel extends CabinetModel {
   List<SlotModel>? get slots;
   @override
   @JsonKey(ignore: true)
-  _$$_CabinetModelCopyWith<_$_CabinetModel> get copyWith =>
+  _$$CabinetModelImplCopyWith<_$CabinetModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -69,23 +69,24 @@ class _$ProfileEventCopyWithImpl<$Res, $Val extends ProfileEvent>
 }
 
 /// @nodoc
-abstract class _$$_LoadCopyWith<$Res> {
-  factory _$$_LoadCopyWith(_$_Load value, $Res Function(_$_Load) then) =
-      __$$_LoadCopyWithImpl<$Res>;
+abstract class _$$LoadImplCopyWith<$Res> {
+  factory _$$LoadImplCopyWith(
+          _$LoadImpl value, $Res Function(_$LoadImpl) then) =
+      __$$LoadImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_LoadCopyWithImpl<$Res>
-    extends _$ProfileEventCopyWithImpl<$Res, _$_Load>
-    implements _$$_LoadCopyWith<$Res> {
-  __$$_LoadCopyWithImpl(_$_Load _value, $Res Function(_$_Load) _then)
+class __$$LoadImplCopyWithImpl<$Res>
+    extends _$ProfileEventCopyWithImpl<$Res, _$LoadImpl>
+    implements _$$LoadImplCopyWith<$Res> {
+  __$$LoadImplCopyWithImpl(_$LoadImpl _value, $Res Function(_$LoadImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Load implements _Load {
-  const _$_Load();
+class _$LoadImpl implements _Load {
+  const _$LoadImpl();
 
   @override
   String toString() {
@@ -95,7 +96,7 @@ class _$_Load implements _Load {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Load);
+        (other.runtimeType == runtimeType && other is _$LoadImpl);
   }
 
   @override
@@ -159,7 +160,7 @@ class _$_Load implements _Load {
 }
 
 abstract class _Load implements ProfileEvent {
-  const factory _Load() = _$_Load;
+  const factory _Load() = _$LoadImpl;
 }
 
 /// @nodoc
@@ -229,25 +230,25 @@ class _$ProfileStateCopyWithImpl<$Res, $Val extends ProfileState>
 }
 
 /// @nodoc
-abstract class _$$_inProgessCopyWith<$Res> {
-  factory _$$_inProgessCopyWith(
-          _$_inProgess value, $Res Function(_$_inProgess) then) =
-      __$$_inProgessCopyWithImpl<$Res>;
+abstract class _$$inProgessImplCopyWith<$Res> {
+  factory _$$inProgessImplCopyWith(
+          _$inProgessImpl value, $Res Function(_$inProgessImpl) then) =
+      __$$inProgessImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_inProgessCopyWithImpl<$Res>
-    extends _$ProfileStateCopyWithImpl<$Res, _$_inProgess>
-    implements _$$_inProgessCopyWith<$Res> {
-  __$$_inProgessCopyWithImpl(
-      _$_inProgess _value, $Res Function(_$_inProgess) _then)
+class __$$inProgessImplCopyWithImpl<$Res>
+    extends _$ProfileStateCopyWithImpl<$Res, _$inProgessImpl>
+    implements _$$inProgessImplCopyWith<$Res> {
+  __$$inProgessImplCopyWithImpl(
+      _$inProgessImpl _value, $Res Function(_$inProgessImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_inProgess implements _inProgess {
-  const _$_inProgess();
+class _$inProgessImpl implements _inProgess {
+  const _$inProgessImpl();
 
   @override
   String toString() {
@@ -257,7 +258,7 @@ class _$_inProgess implements _inProgess {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_inProgess);
+        (other.runtimeType == runtimeType && other is _$inProgessImpl);
   }
 
   @override
@@ -333,14 +334,14 @@ class _$_inProgess implements _inProgess {
 }
 
 abstract class _inProgess implements ProfileState {
-  const factory _inProgess() = _$_inProgess;
+  const factory _inProgess() = _$inProgessImpl;
 }
 
 /// @nodoc
-abstract class _$$_FailureCopyWith<$Res> {
-  factory _$$_FailureCopyWith(
-          _$_Failure value, $Res Function(_$_Failure) then) =
-      __$$_FailureCopyWithImpl<$Res>;
+abstract class _$$FailureImplCopyWith<$Res> {
+  factory _$$FailureImplCopyWith(
+          _$FailureImpl value, $Res Function(_$FailureImpl) then) =
+      __$$FailureImplCopyWithImpl<$Res>;
   @useResult
   $Res call({AppException failure});
 
@@ -348,10 +349,11 @@ abstract class _$$_FailureCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_FailureCopyWithImpl<$Res>
-    extends _$ProfileStateCopyWithImpl<$Res, _$_Failure>
-    implements _$$_FailureCopyWith<$Res> {
-  __$$_FailureCopyWithImpl(_$_Failure _value, $Res Function(_$_Failure) _then)
+class __$$FailureImplCopyWithImpl<$Res>
+    extends _$ProfileStateCopyWithImpl<$Res, _$FailureImpl>
+    implements _$$FailureImplCopyWith<$Res> {
+  __$$FailureImplCopyWithImpl(
+      _$FailureImpl _value, $Res Function(_$FailureImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -359,7 +361,7 @@ class __$$_FailureCopyWithImpl<$Res>
   $Res call({
     Object? failure = null,
   }) {
-    return _then(_$_Failure(
+    return _then(_$FailureImpl(
       null == failure
           ? _value.failure
           : failure // ignore: cast_nullable_to_non_nullable
@@ -378,8 +380,8 @@ class __$$_FailureCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Failure implements _Failure {
-  const _$_Failure(this.failure);
+class _$FailureImpl implements _Failure {
+  const _$FailureImpl(this.failure);
 
   @override
   final AppException failure;
@@ -393,7 +395,7 @@ class _$_Failure implements _Failure {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Failure &&
+            other is _$FailureImpl &&
             (identical(other.failure, failure) || other.failure == failure));
   }
 
@@ -403,8 +405,8 @@ class _$_Failure implements _Failure {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FailureCopyWith<_$_Failure> get copyWith =>
-      __$$_FailureCopyWithImpl<_$_Failure>(this, _$identity);
+  _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
+      __$$FailureImplCopyWithImpl<_$FailureImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -476,19 +478,19 @@ class _$_Failure implements _Failure {
 }
 
 abstract class _Failure implements ProfileState {
-  const factory _Failure(final AppException failure) = _$_Failure;
+  const factory _Failure(final AppException failure) = _$FailureImpl;
 
   AppException get failure;
   @JsonKey(ignore: true)
-  _$$_FailureCopyWith<_$_Failure> get copyWith =>
+  _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_SuccessCopyWith<$Res> {
-  factory _$$_SuccessCopyWith(
-          _$_Success value, $Res Function(_$_Success) then) =
-      __$$_SuccessCopyWithImpl<$Res>;
+abstract class _$$SuccessImplCopyWith<$Res> {
+  factory _$$SuccessImplCopyWith(
+          _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
+      __$$SuccessImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ProfileModel profileModel});
 
@@ -496,10 +498,11 @@ abstract class _$$_SuccessCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_SuccessCopyWithImpl<$Res>
-    extends _$ProfileStateCopyWithImpl<$Res, _$_Success>
-    implements _$$_SuccessCopyWith<$Res> {
-  __$$_SuccessCopyWithImpl(_$_Success _value, $Res Function(_$_Success) _then)
+class __$$SuccessImplCopyWithImpl<$Res>
+    extends _$ProfileStateCopyWithImpl<$Res, _$SuccessImpl>
+    implements _$$SuccessImplCopyWith<$Res> {
+  __$$SuccessImplCopyWithImpl(
+      _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -507,7 +510,7 @@ class __$$_SuccessCopyWithImpl<$Res>
   $Res call({
     Object? profileModel = null,
   }) {
-    return _then(_$_Success(
+    return _then(_$SuccessImpl(
       null == profileModel
           ? _value.profileModel
           : profileModel // ignore: cast_nullable_to_non_nullable
@@ -526,8 +529,8 @@ class __$$_SuccessCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Success implements _Success {
-  const _$_Success(this.profileModel);
+class _$SuccessImpl implements _Success {
+  const _$SuccessImpl(this.profileModel);
 
   @override
   final ProfileModel profileModel;
@@ -541,7 +544,7 @@ class _$_Success implements _Success {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Success &&
+            other is _$SuccessImpl &&
             (identical(other.profileModel, profileModel) ||
                 other.profileModel == profileModel));
   }
@@ -552,8 +555,8 @@ class _$_Success implements _Success {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SuccessCopyWith<_$_Success> get copyWith =>
-      __$$_SuccessCopyWithImpl<_$_Success>(this, _$identity);
+  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
+      __$$SuccessImplCopyWithImpl<_$SuccessImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -625,10 +628,10 @@ class _$_Success implements _Success {
 }
 
 abstract class _Success implements ProfileState {
-  const factory _Success(final ProfileModel profileModel) = _$_Success;
+  const factory _Success(final ProfileModel profileModel) = _$SuccessImpl;
 
   ProfileModel get profileModel;
   @JsonKey(ignore: true)
-  _$$_SuccessCopyWith<_$_Success> get copyWith =>
+  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

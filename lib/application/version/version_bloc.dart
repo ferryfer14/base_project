@@ -4,16 +4,14 @@ import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:new_version/new_version.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 part 'version_bloc.freezed.dart';
 part 'version_event.dart';
 part 'version_state.dart';
 
 @injectable
 class VersionBloc extends Bloc<VersionEvent, VersionState> {
-  final SharedPreferences _prefs;
   final NewVersion _newVersion;
-  VersionBloc(this._prefs, this._newVersion) : super(VersionState.init()) {
+  VersionBloc(this._newVersion) : super(VersionState.init()) {
     on<VersionEvent>(_onEventChanged);
   }
 
@@ -27,8 +25,10 @@ class VersionBloc extends Bloc<VersionEvent, VersionState> {
         final versionStatus = await _newVersion.getVersionStatus();
         if (versionStatus != null) {
           //updateVersion(context, versionStatus.appStoreLink);
-          return emit(state.copyWith
-              .call(isLoading: false, isUpdate: versionStatus.canUpdate, appStoreLink: versionStatus.appStoreLink));
+          return emit(state.copyWith.call(
+              isLoading: false,
+              isUpdate: versionStatus.canUpdate,
+              appStoreLink: versionStatus.appStoreLink));
         }
         return emit(state.copyWith.call(isLoading: false, isUpdate: false));
       }

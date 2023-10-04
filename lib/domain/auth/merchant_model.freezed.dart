@@ -75,22 +75,22 @@ class _$MerchantModelCopyWithImpl<$Res, $Val extends MerchantModel>
 }
 
 /// @nodoc
-abstract class _$$_MerchantModelCopyWith<$Res>
+abstract class _$$MerchantModelImplCopyWith<$Res>
     implements $MerchantModelCopyWith<$Res> {
-  factory _$$_MerchantModelCopyWith(
-          _$_MerchantModel value, $Res Function(_$_MerchantModel) then) =
-      __$$_MerchantModelCopyWithImpl<$Res>;
+  factory _$$MerchantModelImplCopyWith(
+          _$MerchantModelImpl value, $Res Function(_$MerchantModelImpl) then) =
+      __$$MerchantModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int id, String merchant_id, String merchant_name, bool status});
 }
 
 /// @nodoc
-class __$$_MerchantModelCopyWithImpl<$Res>
-    extends _$MerchantModelCopyWithImpl<$Res, _$_MerchantModel>
-    implements _$$_MerchantModelCopyWith<$Res> {
-  __$$_MerchantModelCopyWithImpl(
-      _$_MerchantModel _value, $Res Function(_$_MerchantModel) _then)
+class __$$MerchantModelImplCopyWithImpl<$Res>
+    extends _$MerchantModelCopyWithImpl<$Res, _$MerchantModelImpl>
+    implements _$$MerchantModelImplCopyWith<$Res> {
+  __$$MerchantModelImplCopyWithImpl(
+      _$MerchantModelImpl _value, $Res Function(_$MerchantModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -101,7 +101,7 @@ class __$$_MerchantModelCopyWithImpl<$Res>
     Object? merchant_name = null,
     Object? status = null,
   }) {
-    return _then(_$_MerchantModel(
+    return _then(_$MerchantModelImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -124,8 +124,8 @@ class __$$_MerchantModelCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_MerchantModel extends _MerchantModel {
-  const _$_MerchantModel(
+class _$MerchantModelImpl extends _MerchantModel {
+  const _$MerchantModelImpl(
       {required this.id,
       required this.merchant_id,
       required this.merchant_name,
@@ -150,7 +150,7 @@ class _$_MerchantModel extends _MerchantModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MerchantModel &&
+            other is _$MerchantModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.merchant_id, merchant_id) ||
                 other.merchant_id == merchant_id) &&
@@ -166,8 +166,8 @@ class _$_MerchantModel extends _MerchantModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MerchantModelCopyWith<_$_MerchantModel> get copyWith =>
-      __$$_MerchantModelCopyWithImpl<_$_MerchantModel>(this, _$identity);
+  _$$MerchantModelImplCopyWith<_$MerchantModelImpl> get copyWith =>
+      __$$MerchantModelImplCopyWithImpl<_$MerchantModelImpl>(this, _$identity);
 }
 
 abstract class _MerchantModel extends MerchantModel {
@@ -175,7 +175,7 @@ abstract class _MerchantModel extends MerchantModel {
       {required final int id,
       required final String merchant_id,
       required final String merchant_name,
-      required final bool status}) = _$_MerchantModel;
+      required final bool status}) = _$MerchantModelImpl;
   const _MerchantModel._() : super._();
 
   @override
@@ -188,6 +188,6 @@ abstract class _MerchantModel extends MerchantModel {
   bool get status;
   @override
   @JsonKey(ignore: true)
-  _$$_MerchantModelCopyWith<_$_MerchantModel> get copyWith =>
+  _$$MerchantModelImplCopyWith<_$MerchantModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

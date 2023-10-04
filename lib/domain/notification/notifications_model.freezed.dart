@@ -81,22 +81,22 @@ class _$NotificationsModelCopyWithImpl<$Res, $Val extends NotificationsModel>
 }
 
 /// @nodoc
-abstract class _$$_NotificationsModelCopyWith<$Res>
+abstract class _$$NotificationsModelImplCopyWith<$Res>
     implements $NotificationsModelCopyWith<$Res> {
-  factory _$$_NotificationsModelCopyWith(_$_NotificationsModel value,
-          $Res Function(_$_NotificationsModel) then) =
-      __$$_NotificationsModelCopyWithImpl<$Res>;
+  factory _$$NotificationsModelImplCopyWith(_$NotificationsModelImpl value,
+          $Res Function(_$NotificationsModelImpl) then) =
+      __$$NotificationsModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String title, String body, String screen, int id, bool isRead});
 }
 
 /// @nodoc
-class __$$_NotificationsModelCopyWithImpl<$Res>
-    extends _$NotificationsModelCopyWithImpl<$Res, _$_NotificationsModel>
-    implements _$$_NotificationsModelCopyWith<$Res> {
-  __$$_NotificationsModelCopyWithImpl(
-      _$_NotificationsModel _value, $Res Function(_$_NotificationsModel) _then)
+class __$$NotificationsModelImplCopyWithImpl<$Res>
+    extends _$NotificationsModelCopyWithImpl<$Res, _$NotificationsModelImpl>
+    implements _$$NotificationsModelImplCopyWith<$Res> {
+  __$$NotificationsModelImplCopyWithImpl(_$NotificationsModelImpl _value,
+      $Res Function(_$NotificationsModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -108,7 +108,7 @@ class __$$_NotificationsModelCopyWithImpl<$Res>
     Object? id = null,
     Object? isRead = null,
   }) {
-    return _then(_$_NotificationsModel(
+    return _then(_$NotificationsModelImpl(
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -135,8 +135,8 @@ class __$$_NotificationsModelCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_NotificationsModel extends _NotificationsModel {
-  const _$_NotificationsModel(
+class _$NotificationsModelImpl extends _NotificationsModel {
+  const _$NotificationsModelImpl(
       {required this.title,
       required this.body,
       required this.screen,
@@ -164,7 +164,7 @@ class _$_NotificationsModel extends _NotificationsModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_NotificationsModel &&
+            other is _$NotificationsModelImpl &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.body, body) || other.body == body) &&
             (identical(other.screen, screen) || other.screen == screen) &&
@@ -178,8 +178,8 @@ class _$_NotificationsModel extends _NotificationsModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_NotificationsModelCopyWith<_$_NotificationsModel> get copyWith =>
-      __$$_NotificationsModelCopyWithImpl<_$_NotificationsModel>(
+  _$$NotificationsModelImplCopyWith<_$NotificationsModelImpl> get copyWith =>
+      __$$NotificationsModelImplCopyWithImpl<_$NotificationsModelImpl>(
           this, _$identity);
 }
 
@@ -189,7 +189,7 @@ abstract class _NotificationsModel extends NotificationsModel {
       required final String body,
       required final String screen,
       required final int id,
-      required final bool isRead}) = _$_NotificationsModel;
+      required final bool isRead}) = _$NotificationsModelImpl;
   const _NotificationsModel._() : super._();
 
   @override
@@ -204,6 +204,6 @@ abstract class _NotificationsModel extends NotificationsModel {
   bool get isRead;
   @override
   @JsonKey(ignore: true)
-  _$$_NotificationsModelCopyWith<_$_NotificationsModel> get copyWith =>
+  _$$NotificationsModelImplCopyWith<_$NotificationsModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

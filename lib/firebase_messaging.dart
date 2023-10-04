@@ -1,20 +1,17 @@
 import 'dart:async';
 import 'dart:developer';
 
-import 'package:auto_route/auto_route.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:connectivity/connectivity.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 import 'package:standart_project/app_constant.dart';
 import 'package:standart_project/domain/notification/notifications_model.dart';
 import 'package:standart_project/injection.dart';
-import 'package:standart_project/routes/app_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 @pragma('vm:entry-point')
@@ -170,7 +167,7 @@ class FCM {
   }
 
   void selectNotification(NotificationResponse notificationResponse) async {
-    final router = getIt<AppRouter>();
+    // final router = getIt<AppRouter>();
     var data = notificationResponse.payload!.split(", ");
 
     if (data.isNotEmpty) {
@@ -182,7 +179,7 @@ class FCM {
 
   void onDidReceiveLocalNotification(
       int? id, String? title, String? body, String? payload) async {
-    final router = getIt<AppRouter>();
+    // final router = getIt<AppRouter>();
     var data = payload!.split(", ");
 
     if (data.isNotEmpty) {

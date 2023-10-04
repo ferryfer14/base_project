@@ -1,6 +1,4 @@
-import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:standart_project/domain/core/failures.dart';
 
 import '../core/value_objects.dart';
 

@@ -16,8 +16,8 @@ class ColorName {
   /// Color: #EDEDED
   static const Color barColor = Color(0xFFEDEDED);
 
-  /// Color: #00000
-  static const Color blackColor = Color(0x00000);
+  /// Color: #000000
+  static const Color blackColor = Color(0xFF000000);
 
   /// Color: #CB3A31
   static const Color dangerColor = Color(0xFFCB3A31);
@@ -49,6 +49,6 @@ class ColorName {
   /// Color: #C2C2C2
   static const Color unselectedColor = Color(0xFFC2C2C2);
 
-  /// Color: #fffff
-  static const Color whiteColor = Color(0xFFFFF);
+  /// Color: #FFFFFF
+  static const Color whiteColor = Color(0xFFFFFFFF);
 }

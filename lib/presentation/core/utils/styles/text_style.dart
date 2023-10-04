@@ -1,4 +1,3 @@
-import 'package:standart_project/presentation/core/utils/export_utils.dart';
 import 'package:flutter/painting.dart';
 
 import '../../../components/gen/colors.gen.dart';

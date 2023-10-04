@@ -1,22 +1,11 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
-import 'package:dartz/dartz.dart';
-import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:standart_project/app_constant.dart';
 import 'package:standart_project/common/exceptions/exceptions.dart';
 import 'package:standart_project/domain/auth/i_auth_repository.dart';
 import 'package:standart_project/domain/auth/profile_model.dart';
-import 'package:standart_project/domain/cabinet/cabinet_failure.dart';
-import 'package:standart_project/domain/cabinet/cabinet_model.dart';
-import 'package:standart_project/domain/cabinet/i_cabinet_repository.dart';
-import 'package:standart_project/domain/transaction/i_transaction_repository.dart';
-import 'package:standart_project/domain/transaction/transaction_failure.dart';
-import 'package:standart_project/domain/transaction/transaction_model.dart';
-import 'package:permission_handler/permission_handler.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 part 'profile_bloc.freezed.dart';
 part 'profile_event.dart';
 part 'profile_state.dart';

@@ -96,11 +96,11 @@ class _$LicensePlateModelCopyWithImpl<$Res, $Val extends LicensePlateModel>
 }
 
 /// @nodoc
-abstract class _$$_LicensePlateModelCopyWith<$Res>
+abstract class _$$LicensePlateModelImplCopyWith<$Res>
     implements $LicensePlateModelCopyWith<$Res> {
-  factory _$$_LicensePlateModelCopyWith(_$_LicensePlateModel value,
-          $Res Function(_$_LicensePlateModel) then) =
-      __$$_LicensePlateModelCopyWithImpl<$Res>;
+  factory _$$LicensePlateModelImplCopyWith(_$LicensePlateModelImpl value,
+          $Res Function(_$LicensePlateModelImpl) then) =
+      __$$LicensePlateModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -115,11 +115,11 @@ abstract class _$$_LicensePlateModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_LicensePlateModelCopyWithImpl<$Res>
-    extends _$LicensePlateModelCopyWithImpl<$Res, _$_LicensePlateModel>
-    implements _$$_LicensePlateModelCopyWith<$Res> {
-  __$$_LicensePlateModelCopyWithImpl(
-      _$_LicensePlateModel _value, $Res Function(_$_LicensePlateModel) _then)
+class __$$LicensePlateModelImplCopyWithImpl<$Res>
+    extends _$LicensePlateModelCopyWithImpl<$Res, _$LicensePlateModelImpl>
+    implements _$$LicensePlateModelImplCopyWith<$Res> {
+  __$$LicensePlateModelImplCopyWithImpl(_$LicensePlateModelImpl _value,
+      $Res Function(_$LicensePlateModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -131,7 +131,7 @@ class __$$_LicensePlateModelCopyWithImpl<$Res>
     Object? battery_type = null,
     Object? merchant = null,
   }) {
-    return _then(_$_LicensePlateModel(
+    return _then(_$LicensePlateModelImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -158,8 +158,8 @@ class __$$_LicensePlateModelCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_LicensePlateModel extends _LicensePlateModel {
-  const _$_LicensePlateModel(
+class _$LicensePlateModelImpl extends _LicensePlateModel {
+  const _$LicensePlateModelImpl(
       {required this.id,
       required this.plate_number,
       required this.barcode,
@@ -187,7 +187,7 @@ class _$_LicensePlateModel extends _LicensePlateModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LicensePlateModel &&
+            other is _$LicensePlateModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.plate_number, plate_number) ||
                 other.plate_number == plate_number) &&
@@ -205,8 +205,8 @@ class _$_LicensePlateModel extends _LicensePlateModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LicensePlateModelCopyWith<_$_LicensePlateModel> get copyWith =>
-      __$$_LicensePlateModelCopyWithImpl<_$_LicensePlateModel>(
+  _$$LicensePlateModelImplCopyWith<_$LicensePlateModelImpl> get copyWith =>
+      __$$LicensePlateModelImplCopyWithImpl<_$LicensePlateModelImpl>(
           this, _$identity);
 }
 
@@ -216,7 +216,7 @@ abstract class _LicensePlateModel extends LicensePlateModel {
       required final String plate_number,
       required final String barcode,
       required final String battery_type,
-      required final MerchantModel merchant}) = _$_LicensePlateModel;
+      required final MerchantModel merchant}) = _$LicensePlateModelImpl;
   const _LicensePlateModel._() : super._();
 
   @override
@@ -231,6 +231,6 @@ abstract class _LicensePlateModel extends LicensePlateModel {
   MerchantModel get merchant;
   @override
   @JsonKey(ignore: true)
-  _$$_LicensePlateModelCopyWith<_$_LicensePlateModel> get copyWith =>
+  _$$LicensePlateModelImplCopyWith<_$LicensePlateModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

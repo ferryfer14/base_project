@@ -98,11 +98,11 @@ class _$ProfileModelCopyWithImpl<$Res, $Val extends ProfileModel>
 }
 
 /// @nodoc
-abstract class _$$_ProfileModelCopyWith<$Res>
+abstract class _$$ProfileModelImplCopyWith<$Res>
     implements $ProfileModelCopyWith<$Res> {
-  factory _$$_ProfileModelCopyWith(
-          _$_ProfileModel value, $Res Function(_$_ProfileModel) then) =
-      __$$_ProfileModelCopyWithImpl<$Res>;
+  factory _$$ProfileModelImplCopyWith(
+          _$ProfileModelImpl value, $Res Function(_$ProfileModelImpl) then) =
+      __$$ProfileModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -118,11 +118,11 @@ abstract class _$$_ProfileModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ProfileModelCopyWithImpl<$Res>
-    extends _$ProfileModelCopyWithImpl<$Res, _$_ProfileModel>
-    implements _$$_ProfileModelCopyWith<$Res> {
-  __$$_ProfileModelCopyWithImpl(
-      _$_ProfileModel _value, $Res Function(_$_ProfileModel) _then)
+class __$$ProfileModelImplCopyWithImpl<$Res>
+    extends _$ProfileModelCopyWithImpl<$Res, _$ProfileModelImpl>
+    implements _$$ProfileModelImplCopyWith<$Res> {
+  __$$ProfileModelImplCopyWithImpl(
+      _$ProfileModelImpl _value, $Res Function(_$ProfileModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -133,7 +133,7 @@ class __$$_ProfileModelCopyWithImpl<$Res>
     Object? license_plate = null,
     Object? merchant = null,
   }) {
-    return _then(_$_ProfileModel(
+    return _then(_$ProfileModelImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -156,8 +156,8 @@ class __$$_ProfileModelCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ProfileModel extends _ProfileModel {
-  const _$_ProfileModel(
+class _$ProfileModelImpl extends _ProfileModel {
+  const _$ProfileModelImpl(
       {required this.id,
       required this.username,
       required this.license_plate,
@@ -182,7 +182,7 @@ class _$_ProfileModel extends _ProfileModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ProfileModel &&
+            other is _$ProfileModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.username, username) ||
                 other.username == username) &&
@@ -199,8 +199,8 @@ class _$_ProfileModel extends _ProfileModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ProfileModelCopyWith<_$_ProfileModel> get copyWith =>
-      __$$_ProfileModelCopyWithImpl<_$_ProfileModel>(this, _$identity);
+  _$$ProfileModelImplCopyWith<_$ProfileModelImpl> get copyWith =>
+      __$$ProfileModelImplCopyWithImpl<_$ProfileModelImpl>(this, _$identity);
 }
 
 abstract class _ProfileModel extends ProfileModel {
@@ -208,7 +208,7 @@ abstract class _ProfileModel extends ProfileModel {
       {required final int id,
       required final String username,
       required final LicensePlateModel license_plate,
-      required final MerchantModel merchant}) = _$_ProfileModel;
+      required final MerchantModel merchant}) = _$ProfileModelImpl;
   const _ProfileModel._() : super._();
 
   @override
@@ -221,6 +221,6 @@ abstract class _ProfileModel extends ProfileModel {
   MerchantModel get merchant;
   @override
   @JsonKey(ignore: true)
-  _$$_ProfileModelCopyWith<_$_ProfileModel> get copyWith =>
+  _$$ProfileModelImplCopyWith<_$ProfileModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

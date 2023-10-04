@@ -86,11 +86,11 @@ class _$BatteryModelCopyWithImpl<$Res, $Val extends BatteryModel>
 }
 
 /// @nodoc
-abstract class _$$_BatteryModelCopyWith<$Res>
+abstract class _$$BatteryModelImplCopyWith<$Res>
     implements $BatteryModelCopyWith<$Res> {
-  factory _$$_BatteryModelCopyWith(
-          _$_BatteryModel value, $Res Function(_$_BatteryModel) then) =
-      __$$_BatteryModelCopyWithImpl<$Res>;
+  factory _$$BatteryModelImplCopyWith(
+          _$BatteryModelImpl value, $Res Function(_$BatteryModelImpl) then) =
+      __$$BatteryModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -102,11 +102,11 @@ abstract class _$$_BatteryModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_BatteryModelCopyWithImpl<$Res>
-    extends _$BatteryModelCopyWithImpl<$Res, _$_BatteryModel>
-    implements _$$_BatteryModelCopyWith<$Res> {
-  __$$_BatteryModelCopyWithImpl(
-      _$_BatteryModel _value, $Res Function(_$_BatteryModel) _then)
+class __$$BatteryModelImplCopyWithImpl<$Res>
+    extends _$BatteryModelCopyWithImpl<$Res, _$BatteryModelImpl>
+    implements _$$BatteryModelImplCopyWith<$Res> {
+  __$$BatteryModelImplCopyWithImpl(
+      _$BatteryModelImpl _value, $Res Function(_$BatteryModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -118,7 +118,7 @@ class __$$_BatteryModelCopyWithImpl<$Res>
     Object? activation_date = freezed,
     Object? status = freezed,
   }) {
-    return _then(_$_BatteryModel(
+    return _then(_$BatteryModelImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -145,8 +145,8 @@ class __$$_BatteryModelCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_BatteryModel extends _BatteryModel {
-  const _$_BatteryModel(
+class _$BatteryModelImpl extends _BatteryModel {
+  const _$BatteryModelImpl(
       {this.id,
       this.barcode,
       this.battery_type,
@@ -174,7 +174,7 @@ class _$_BatteryModel extends _BatteryModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_BatteryModel &&
+            other is _$BatteryModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.barcode, barcode) || other.barcode == barcode) &&
             (identical(other.battery_type, battery_type) ||
@@ -191,8 +191,8 @@ class _$_BatteryModel extends _BatteryModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_BatteryModelCopyWith<_$_BatteryModel> get copyWith =>
-      __$$_BatteryModelCopyWithImpl<_$_BatteryModel>(this, _$identity);
+  _$$BatteryModelImplCopyWith<_$BatteryModelImpl> get copyWith =>
+      __$$BatteryModelImplCopyWithImpl<_$BatteryModelImpl>(this, _$identity);
 }
 
 abstract class _BatteryModel extends BatteryModel {
@@ -201,7 +201,7 @@ abstract class _BatteryModel extends BatteryModel {
       final String? barcode,
       final String? battery_type,
       final String? activation_date,
-      final bool? status}) = _$_BatteryModel;
+      final bool? status}) = _$BatteryModelImpl;
   const _BatteryModel._() : super._();
 
   @override
@@ -216,6 +216,6 @@ abstract class _BatteryModel extends BatteryModel {
   bool? get status;
   @override
   @JsonKey(ignore: true)
-  _$$_BatteryModelCopyWith<_$_BatteryModel> get copyWith =>
+  _$$BatteryModelImplCopyWith<_$BatteryModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

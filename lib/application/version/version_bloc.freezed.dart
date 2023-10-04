@@ -89,21 +89,22 @@ class _$VersionEventCopyWithImpl<$Res, $Val extends VersionEvent>
 }
 
 /// @nodoc
-abstract class _$$_StartedCopyWith<$Res>
+abstract class _$$StartedImplCopyWith<$Res>
     implements $VersionEventCopyWith<$Res> {
-  factory _$$_StartedCopyWith(
-          _$_Started value, $Res Function(_$_Started) then) =
-      __$$_StartedCopyWithImpl<$Res>;
+  factory _$$StartedImplCopyWith(
+          _$StartedImpl value, $Res Function(_$StartedImpl) then) =
+      __$$StartedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({bool isRefresh});
 }
 
 /// @nodoc
-class __$$_StartedCopyWithImpl<$Res>
-    extends _$VersionEventCopyWithImpl<$Res, _$_Started>
-    implements _$$_StartedCopyWith<$Res> {
-  __$$_StartedCopyWithImpl(_$_Started _value, $Res Function(_$_Started) _then)
+class __$$StartedImplCopyWithImpl<$Res>
+    extends _$VersionEventCopyWithImpl<$Res, _$StartedImpl>
+    implements _$$StartedImplCopyWith<$Res> {
+  __$$StartedImplCopyWithImpl(
+      _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -111,7 +112,7 @@ class __$$_StartedCopyWithImpl<$Res>
   $Res call({
     Object? isRefresh = null,
   }) {
-    return _then(_$_Started(
+    return _then(_$StartedImpl(
       isRefresh: null == isRefresh
           ? _value.isRefresh
           : isRefresh // ignore: cast_nullable_to_non_nullable
@@ -122,8 +123,8 @@ class __$$_StartedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Started implements _Started {
-  const _$_Started({this.isRefresh = false});
+class _$StartedImpl implements _Started {
+  const _$StartedImpl({this.isRefresh = false});
 
   @override
   @JsonKey()
@@ -138,7 +139,7 @@ class _$_Started implements _Started {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Started &&
+            other is _$StartedImpl &&
             (identical(other.isRefresh, isRefresh) ||
                 other.isRefresh == isRefresh));
   }
@@ -149,8 +150,8 @@ class _$_Started implements _Started {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_StartedCopyWith<_$_Started> get copyWith =>
-      __$$_StartedCopyWithImpl<_$_Started>(this, _$identity);
+  _$$StartedImplCopyWith<_$StartedImpl> get copyWith =>
+      __$$StartedImplCopyWithImpl<_$StartedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -210,13 +211,13 @@ class _$_Started implements _Started {
 }
 
 abstract class _Started implements VersionEvent {
-  const factory _Started({final bool isRefresh}) = _$_Started;
+  const factory _Started({final bool isRefresh}) = _$StartedImpl;
 
   @override
   bool get isRefresh;
   @override
   @JsonKey(ignore: true)
-  _$$_StartedCopyWith<_$_Started> get copyWith =>
+  _$$StartedImplCopyWith<_$StartedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -275,22 +276,22 @@ class _$VersionStateCopyWithImpl<$Res, $Val extends VersionState>
 }
 
 /// @nodoc
-abstract class _$$_VersionStateCopyWith<$Res>
+abstract class _$$VersionStateImplCopyWith<$Res>
     implements $VersionStateCopyWith<$Res> {
-  factory _$$_VersionStateCopyWith(
-          _$_VersionState value, $Res Function(_$_VersionState) then) =
-      __$$_VersionStateCopyWithImpl<$Res>;
+  factory _$$VersionStateImplCopyWith(
+          _$VersionStateImpl value, $Res Function(_$VersionStateImpl) then) =
+      __$$VersionStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({bool isUpdate, bool isLoading, String appStoreLink});
 }
 
 /// @nodoc
-class __$$_VersionStateCopyWithImpl<$Res>
-    extends _$VersionStateCopyWithImpl<$Res, _$_VersionState>
-    implements _$$_VersionStateCopyWith<$Res> {
-  __$$_VersionStateCopyWithImpl(
-      _$_VersionState _value, $Res Function(_$_VersionState) _then)
+class __$$VersionStateImplCopyWithImpl<$Res>
+    extends _$VersionStateCopyWithImpl<$Res, _$VersionStateImpl>
+    implements _$$VersionStateImplCopyWith<$Res> {
+  __$$VersionStateImplCopyWithImpl(
+      _$VersionStateImpl _value, $Res Function(_$VersionStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -300,7 +301,7 @@ class __$$_VersionStateCopyWithImpl<$Res>
     Object? isLoading = null,
     Object? appStoreLink = null,
   }) {
-    return _then(_$_VersionState(
+    return _then(_$VersionStateImpl(
       isUpdate: null == isUpdate
           ? _value.isUpdate
           : isUpdate // ignore: cast_nullable_to_non_nullable
@@ -319,8 +320,8 @@ class __$$_VersionStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_VersionState implements _VersionState {
-  const _$_VersionState(
+class _$VersionStateImpl implements _VersionState {
+  const _$VersionStateImpl(
       {required this.isUpdate,
       required this.isLoading,
       required this.appStoreLink});
@@ -341,7 +342,7 @@ class _$_VersionState implements _VersionState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_VersionState &&
+            other is _$VersionStateImpl &&
             (identical(other.isUpdate, isUpdate) ||
                 other.isUpdate == isUpdate) &&
             (identical(other.isLoading, isLoading) ||
@@ -357,15 +358,15 @@ class _$_VersionState implements _VersionState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_VersionStateCopyWith<_$_VersionState> get copyWith =>
-      __$$_VersionStateCopyWithImpl<_$_VersionState>(this, _$identity);
+  _$$VersionStateImplCopyWith<_$VersionStateImpl> get copyWith =>
+      __$$VersionStateImplCopyWithImpl<_$VersionStateImpl>(this, _$identity);
 }
 
 abstract class _VersionState implements VersionState {
   const factory _VersionState(
       {required final bool isUpdate,
       required final bool isLoading,
-      required final String appStoreLink}) = _$_VersionState;
+      required final String appStoreLink}) = _$VersionStateImpl;
 
   @override
   bool get isUpdate;
@@ -375,6 +376,6 @@ abstract class _VersionState implements VersionState {
   String get appStoreLink;
   @override
   @JsonKey(ignore: true)
-  _$$_VersionStateCopyWith<_$_VersionState> get copyWith =>
+  _$$VersionStateImplCopyWith<_$VersionStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

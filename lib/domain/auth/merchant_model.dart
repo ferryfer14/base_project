@@ -1,7 +1,4 @@
-import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:standart_project/domain/auth/license_plate_model.dart';
-import 'package:standart_project/domain/core/failures.dart';
 
 part 'merchant_model.freezed.dart';
 

@@ -1,8 +1,5 @@
-import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-
-import '../core/value_objects.dart';
 
 part 'notifications_model.freezed.dart';
 

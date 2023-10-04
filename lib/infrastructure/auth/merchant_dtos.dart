@@ -1,11 +1,7 @@
 // ignore_for_file: invalid_annotation_target
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:standart_project/domain/auth/auth_model.dart';
-import 'package:standart_project/domain/auth/license_plate_model.dart';
 import 'package:standart_project/domain/auth/merchant_model.dart';
-import 'package:standart_project/domain/auth/profile_model.dart';
-import 'package:standart_project/domain/cabinet/cabinet_model.dart';
 
 part 'merchant_dtos.freezed.dart';
 part 'merchant_dtos.g.dart';
