@@ -24,10 +24,6 @@ mixin _$ProfileModelDto {
   int? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'username')
   String? get username => throw _privateConstructorUsedError;
-  @JsonKey(name: 'license_plate')
-  LicensePlateModelDto? get license_plate => throw _privateConstructorUsedError;
-  @JsonKey(name: 'merchant')
-  MerchantModelDto? get merchant => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -43,12 +39,7 @@ abstract class $ProfileModelDtoCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: 'id') int? id,
-      @JsonKey(name: 'username') String? username,
-      @JsonKey(name: 'license_plate') LicensePlateModelDto? license_plate,
-      @JsonKey(name: 'merchant') MerchantModelDto? merchant});
-
-  $LicensePlateModelDtoCopyWith<$Res>? get license_plate;
-  $MerchantModelDtoCopyWith<$Res>? get merchant;
+      @JsonKey(name: 'username') String? username});
 }
 
 /// @nodoc
@@ -66,8 +57,6 @@ class _$ProfileModelDtoCopyWithImpl<$Res, $Val extends ProfileModelDto>
   $Res call({
     Object? id = freezed,
     Object? username = freezed,
-    Object? license_plate = freezed,
-    Object? merchant = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -78,39 +67,7 @@ class _$ProfileModelDtoCopyWithImpl<$Res, $Val extends ProfileModelDto>
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String?,
-      license_plate: freezed == license_plate
-          ? _value.license_plate
-          : license_plate // ignore: cast_nullable_to_non_nullable
-              as LicensePlateModelDto?,
-      merchant: freezed == merchant
-          ? _value.merchant
-          : merchant // ignore: cast_nullable_to_non_nullable
-              as MerchantModelDto?,
     ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $LicensePlateModelDtoCopyWith<$Res>? get license_plate {
-    if (_value.license_plate == null) {
-      return null;
-    }
-
-    return $LicensePlateModelDtoCopyWith<$Res>(_value.license_plate!, (value) {
-      return _then(_value.copyWith(license_plate: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $MerchantModelDtoCopyWith<$Res>? get merchant {
-    if (_value.merchant == null) {
-      return null;
-    }
-
-    return $MerchantModelDtoCopyWith<$Res>(_value.merchant!, (value) {
-      return _then(_value.copyWith(merchant: value) as $Val);
-    });
   }
 }
 
@@ -124,14 +81,7 @@ abstract class _$$ProfileModelDtoImplCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'id') int? id,
-      @JsonKey(name: 'username') String? username,
-      @JsonKey(name: 'license_plate') LicensePlateModelDto? license_plate,
-      @JsonKey(name: 'merchant') MerchantModelDto? merchant});
-
-  @override
-  $LicensePlateModelDtoCopyWith<$Res>? get license_plate;
-  @override
-  $MerchantModelDtoCopyWith<$Res>? get merchant;
+      @JsonKey(name: 'username') String? username});
 }
 
 /// @nodoc
@@ -147,8 +97,6 @@ class __$$ProfileModelDtoImplCopyWithImpl<$Res>
   $Res call({
     Object? id = freezed,
     Object? username = freezed,
-    Object? license_plate = freezed,
-    Object? merchant = freezed,
   }) {
     return _then(_$ProfileModelDtoImpl(
       id: freezed == id
@@ -159,14 +107,6 @@ class __$$ProfileModelDtoImplCopyWithImpl<$Res>
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String?,
-      license_plate: freezed == license_plate
-          ? _value.license_plate
-          : license_plate // ignore: cast_nullable_to_non_nullable
-              as LicensePlateModelDto?,
-      merchant: freezed == merchant
-          ? _value.merchant
-          : merchant // ignore: cast_nullable_to_non_nullable
-              as MerchantModelDto?,
     ));
   }
 }
@@ -175,10 +115,7 @@ class __$$ProfileModelDtoImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ProfileModelDtoImpl extends _ProfileModelDto {
   const _$ProfileModelDtoImpl(
-      {@JsonKey(name: 'id') this.id,
-      @JsonKey(name: 'username') this.username,
-      @JsonKey(name: 'license_plate') this.license_plate,
-      @JsonKey(name: 'merchant') this.merchant})
+      {@JsonKey(name: 'id') this.id, @JsonKey(name: 'username') this.username})
       : super._();
 
   factory _$ProfileModelDtoImpl.fromJson(Map<String, dynamic> json) =>
@@ -190,16 +127,10 @@ class _$ProfileModelDtoImpl extends _ProfileModelDto {
   @override
   @JsonKey(name: 'username')
   final String? username;
-  @override
-  @JsonKey(name: 'license_plate')
-  final LicensePlateModelDto? license_plate;
-  @override
-  @JsonKey(name: 'merchant')
-  final MerchantModelDto? merchant;
 
   @override
   String toString() {
-    return 'ProfileModelDto(id: $id, username: $username, license_plate: $license_plate, merchant: $merchant)';
+    return 'ProfileModelDto(id: $id, username: $username)';
   }
 
   @override
@@ -209,17 +140,12 @@ class _$ProfileModelDtoImpl extends _ProfileModelDto {
             other is _$ProfileModelDtoImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.username, username) ||
-                other.username == username) &&
-            (identical(other.license_plate, license_plate) ||
-                other.license_plate == license_plate) &&
-            (identical(other.merchant, merchant) ||
-                other.merchant == merchant));
+                other.username == username));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, username, license_plate, merchant);
+  int get hashCode => Object.hash(runtimeType, id, username);
 
   @JsonKey(ignore: true)
   @override
@@ -238,11 +164,9 @@ class _$ProfileModelDtoImpl extends _ProfileModelDto {
 
 abstract class _ProfileModelDto extends ProfileModelDto {
   const factory _ProfileModelDto(
-      {@JsonKey(name: 'id') final int? id,
-      @JsonKey(name: 'username') final String? username,
-      @JsonKey(name: 'license_plate') final LicensePlateModelDto? license_plate,
-      @JsonKey(name: 'merchant')
-      final MerchantModelDto? merchant}) = _$ProfileModelDtoImpl;
+          {@JsonKey(name: 'id') final int? id,
+          @JsonKey(name: 'username') final String? username}) =
+      _$ProfileModelDtoImpl;
   const _ProfileModelDto._() : super._();
 
   factory _ProfileModelDto.fromJson(Map<String, dynamic> json) =
@@ -254,12 +178,6 @@ abstract class _ProfileModelDto extends ProfileModelDto {
   @override
   @JsonKey(name: 'username')
   String? get username;
-  @override
-  @JsonKey(name: 'license_plate')
-  LicensePlateModelDto? get license_plate;
-  @override
-  @JsonKey(name: 'merchant')
-  MerchantModelDto? get merchant;
   @override
   @JsonKey(ignore: true)
   _$$ProfileModelDtoImplCopyWith<_$ProfileModelDtoImpl> get copyWith =>
