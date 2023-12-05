@@ -80,8 +80,8 @@ dependencies:
   loading_animation_widget: ^1.2.0+4
   webview_flutter: ^4.0.2
   firebase_messaging: ^14.2.1
-  awesome_notifications_fcm: ^0.8.0
-  awesome_notifications: ^0.8.2
+  # awesome_notifications_fcm: ^0.8.0
+  # awesome_notifications: ^0.8.2
   map_launcher: ^2.4.0
   flutter_launcher_icons: ^0.13.1
   flutter_local_notifications: ^15.1.1

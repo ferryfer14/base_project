@@ -30,7 +30,7 @@ class SignInBody extends StatelessWidget {
                     width: double.infinity,
                   ),
                   siboh8,
-                  Text(AppLocalizations.of(context)!.welcome, style: ts24black),
+                  Text(AppLocalizations.of(context).welcome, style: ts24black),
                   siboh16,
                   SignInForm(),
                   siboh32,

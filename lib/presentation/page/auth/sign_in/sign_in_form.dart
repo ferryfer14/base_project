@@ -46,7 +46,7 @@ class SignInForm extends StatelessWidget {
                             context: context,
                             color: ColorName.dangerColor,
                             duration: const Duration(milliseconds: 3000),
-                            content: Text(AppLocalizations.of(context)!
+                            content: Text(AppLocalizations.of(context)
                                 .username_or_password_wrong),
                           );
                         },
@@ -62,11 +62,11 @@ class SignInForm extends StatelessWidget {
                   siboh20,
                   CustomTextField(
                     cursorColor: ColorName.primaryColor,
-                    label: AppLocalizations.of(context)!.username,
+                    label: AppLocalizations.of(context).username,
                     fontSizeLabel: 16,
                     hint: '',
                     fontSizeInput: 14,
-                    info: AppLocalizations.of(context)!.info_username,
+                    info: AppLocalizations.of(context).info_username,
                     fontSizeInfo: 12,
                     colorInfo: ColorName.secondaryColor,
                     colorInput: ColorName.inputColor,
@@ -79,11 +79,10 @@ class SignInForm extends StatelessWidget {
                     },
                     validator: (val) {
                       if (val!.isEmpty) {
-                        return AppLocalizations.of(context)!
-                            .username_cant_empty;
+                        return AppLocalizations.of(context).username_cant_empty;
                       } else {
                         if (val.length < 2 || val.length > 9) {
-                          return AppLocalizations.of(context)!
+                          return AppLocalizations.of(context)
                               .username_not_valid;
                         }
                       }
@@ -93,7 +92,7 @@ class SignInForm extends StatelessWidget {
                   siboh20,
                   CustomTextField(
                     cursorColor: ColorName.primaryColor,
-                    label: AppLocalizations.of(context)!.password,
+                    label: AppLocalizations.of(context).password,
                     colorLabel: ColorName.inputColor,
                     fontSizeLabel: 16,
                     hint: '',
@@ -109,11 +108,10 @@ class SignInForm extends StatelessWidget {
                     },
                     validator: (val) {
                       if (val!.isEmpty) {
-                        return AppLocalizations.of(context)!
-                            .password_cant_empty;
+                        return AppLocalizations.of(context).password_cant_empty;
                       } else {
                         if (val.length < 8) {
-                          return AppLocalizations.of(context)!
+                          return AppLocalizations.of(context)
                               .password_not_valid;
                         }
                       }
@@ -128,7 +126,7 @@ class SignInForm extends StatelessWidget {
                             color: ColorName.whiteColor, size: 20)
                         : null,
                     sibow: state.isLoading ? sibow8 : null,
-                    title: AppLocalizations.of(context)!.btn_login,
+                    title: AppLocalizations.of(context).btn_login,
                     titleStyle: ts16white,
                     onTap: () {
                       if (_key.currentState!.validate() && !state.isLoading) {
