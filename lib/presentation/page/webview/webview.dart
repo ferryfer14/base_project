@@ -8,9 +8,8 @@ import 'package:webview_flutter/webview_flutter.dart';
 import '../../components/gen/colors.gen.dart';
 
 class WebviewPage extends StatelessWidget {
-  WebviewPage({Key? key, required this.url, required this.title})
+  const WebviewPage({Key? key, required this.url, required this.title})
       : super(key: key);
-  final _key = GlobalKey<FormState>();
   final String url;
   final String title;
 

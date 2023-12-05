@@ -1,25 +1,23 @@
 import 'dart:async';
+import 'dart:convert';
 import 'dart:developer';
-
-import 'package:auto_route/auto_route.dart';
-import 'package:awesome_notifications/awesome_notifications.dart';
+// import 'dart:ui';
 import 'package:connectivity/connectivity.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 import 'package:standart_project/app_constant.dart';
 import 'package:standart_project/domain/notification/notifications_model.dart';
 import 'package:standart_project/injection.dart';
-import 'package:standart_project/routes/app_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:standart_project/presentation/components/gen/colors.gen.dart';
+// import 'package:standart_project/routes/app_router.dart';
 
 @pragma('vm:entry-point')
 Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-  await Firebase.initializeApp();
   // If you're going to use other Firebase services in the background, such as Firestore,
   // make sure you call `initializeApp` before using other Firebase services.
   log('background', name: 'firebase');
@@ -35,17 +33,22 @@ Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
 
 class FCM {
   final pref = getIt<SharedPreferences>();
-  setNotifications() {
+  setNotifications() async {
+    await Firebase.initializeApp();
     // handling when app is in foreground
+    // await getInitialMessage();
+
+    FirebaseMessaging.onBackgroundMessage(firebaseMessagingBackgroundHandler);
+    FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) async {
+      handleNotificationMessage(message);
+    });
     FirebaseMessaging.onMessage.listen((RemoteMessage message) async {
       handleNotificationMessage(message);
 
       log('data onMessage :\n${message.toMap()}', name: 'firebase');
     });
-    getInitialMessage();
 
     // handling when app open from notification[;,jy\
-    FirebaseMessaging.onBackgroundMessage(firebaseMessagingBackgroundHandler);
   }
 
   Future<void> getInitialMessage() async {
@@ -75,16 +78,18 @@ class FCM {
 
       final notifs = NotificationsModel.fromRemoteMessage(message);
       Map<String, String> payload = {
-        "screen": message.data['screen'] ?? '',
+        "module": message.data['module'] ?? '',
         "id": message.data['id'] ?? '0'
       };
       if (message.data.isNotEmpty) {
-        showNotification(notification: notifs, payload: payload);
+        showNotification(
+            message: message, notificationsModel: notifs, payload: payload);
       } else if (message.notification != null && message.data.isEmpty) {
-        /*showNotification(
-            notification: notifs.copyWith(
+        showNotification(
+            message: message,
+            notificationsModel: notifs.copyWith(
                 title: message.notification!.title ?? "",
-                body: message.notification!.body ?? ""));*/
+                body: message.notification!.body ?? ""));
       }
     } catch (e, s) {
       log(
@@ -118,45 +123,46 @@ class FCM {
 
       FirebaseMessaging.instance.getInitialMessage().then((value) => null);
 
-      AwesomeNotifications().isNotificationAllowed().then((isAllowed) {
-        if (!isAllowed) {
-          AwesomeNotifications().requestPermissionToSendNotifications();
-        }
-      });
+      // AwesomeNotifications().isNotificationAllowed().then((isAllowed) {
+      //   if (!isAllowed) {
+      //     AwesomeNotifications().requestPermissionToSendNotifications();
+      //   }
+      // });
 
-      await AwesomeNotifications().initialize(
-        'resource://drawable/icon_apps',
-        [
-          NotificationChannel(
-            channelKey: 'basic_channel',
-            channelName: 'Basic Notifications',
-            channelDescription: 'This is channel for default notifications',
-            importance: NotificationImportance.High,
-            playSound: true,
-            onlyAlertOnce: true,
-            channelShowBadge: true,
-          ),
-        ],
-      );
+      // await AwesomeNotifications().initialize(
+      //   'resource://drawable/icon_apps',
+      //   [
+      //     NotificationChannel(
+      //       channelKey: 'basic_channel',
+      //       channelName: 'Basic Notifications',
+      //       channelDescription: 'This is channel for default notifications',
+      //       importance: NotificationImportance.High,
+      //       defaultColor: Color(0xFF9D50DD),
+      //       playSound: true,
+      //       onlyAlertOnce: true,
+      //       channelShowBadge: true,
+      //     ),
+      //   ],
+      // );
 
       FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
           FlutterLocalNotificationsPlugin();
 
-      const initializationSettingsAndroid =
-          AndroidInitializationSettings('@drawable/icon_apps');
-      final DarwinInitializationSettings initializationSettingsDarwin =
-          DarwinInitializationSettings(
-              onDidReceiveLocalNotification: onDidReceiveLocalNotification);
-      final InitializationSettings initializationSettings =
-          InitializationSettings(
-              android: initializationSettingsAndroid,
-              iOS: initializationSettingsDarwin,
-              macOS: null);
+      // const initializationSettingsAndroid =
+      //     AndroidInitializationSettings('@drawable/icon_apps');
+      // final DarwinInitializationSettings initializationSettingsDarwin =
+      //     DarwinInitializationSettings(
+      //         onDidReceiveLocalNotification: onDidReceiveLocalNotification);
+      // final InitializationSettings initializationSettings =
+      //     InitializationSettings(
+      //         android: initializationSettingsAndroid,
+      //         iOS: initializationSettingsDarwin,
+      //         macOS: null);
 
-      await flutterLocalNotificationsPlugin.initialize(initializationSettings,
-          onDidReceiveNotificationResponse: selectNotification);
+      // await flutterLocalNotificationsPlugin.initialize(initializationSettings,
+      //     onDidReceiveNotificationResponse: selectNotification);
 
-      final bool? result = await flutterLocalNotificationsPlugin
+      await flutterLocalNotificationsPlugin
           .resolvePlatformSpecificImplementation<
               IOSFlutterLocalNotificationsPlugin>()
           ?.requestPermissions(
@@ -170,19 +176,19 @@ class FCM {
   }
 
   void selectNotification(NotificationResponse notificationResponse) async {
-    final router = getIt<AppRouter>();
-    var data = notificationResponse.payload!.split(", ");
+    // final router = getIt<AppRouter>();
+    Map<String, dynamic> data = jsonDecode(notificationResponse.payload!);
 
     if (data.isNotEmpty) {
-      // if (data[0] == 'transaction') {
-      //   router.push(ProfileRoute());
+      // if (data['module'] == 'task') {
+      //   router.push(DetailTaskRoute(taskId: int.parse(data['id'])));
       // }
     }
   }
 
   void onDidReceiveLocalNotification(
       int? id, String? title, String? body, String? payload) async {
-    final router = getIt<AppRouter>();
+    // final router = getIt<AppRouter>();
     var data = payload!.split(", ");
 
     if (data.isNotEmpty) {
@@ -195,7 +201,7 @@ class FCM {
   void _firebaseInitialized() async {
     messagingRequestPermission();
     SharedPreferences pref = getIt<SharedPreferences>();
-    FirebaseMessaging.instance.getToken().then((token) async {
+    await FirebaseMessaging.instance.getToken().then((token) async {
       log('token: $token', name: 'firebase');
       pref.setString(vFirebaseToken, token!);
       debugPrint('firebase token $token');
@@ -229,20 +235,77 @@ class FCM {
   }
 
   void showNotification({
+    required RemoteMessage message,
+    required NotificationsModel notificationsModel,
     int? id,
-    required NotificationsModel notification,
     Map<String, String>? payload,
   }) async {
-    String title = notification.title;
-    String body = notification.body;
-    await AwesomeNotifications().createNotification(
-      content: NotificationContent(
-        id: id ?? 1000,
-        channelKey: "basic_channel",
-        title: title,
-        body: body,
-        payload: payload,
-      ),
+    String title = notificationsModel.title;
+    String body = notificationsModel.body;
+
+    final AndroidNotificationChannel channel = androidNotificationChannel();
+    final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
+        FlutterLocalNotificationsPlugin();
+    await flutterLocalNotificationsPlugin
+        .resolvePlatformSpecificImplementation<
+            AndroidFlutterLocalNotificationsPlugin>()
+        ?.createNotificationChannel(channel);
+    const AndroidInitializationSettings androidSettings =
+        AndroidInitializationSettings('@drawable/icon_apps');
+    const DarwinInitializationSettings iOSSettings =
+        DarwinInitializationSettings(
+      requestSoundPermission: false,
+      requestBadgePermission: false,
+      requestAlertPermission: false,
     );
+    const InitializationSettings initializationSettings =
+        InitializationSettings(android: androidSettings, iOS: iOSSettings);
+
+    await flutterLocalNotificationsPlugin.initialize(initializationSettings,
+        onDidReceiveNotificationResponse: selectNotification);
+
+    final RemoteNotification? notification = message.notification;
+    final AndroidNotification? android = message.notification?.android;
+    flutterLocalNotificationsPlugin.show(
+      notification.hashCode,
+      title,
+      body,
+      NotificationDetails(
+        android: AndroidNotificationDetails(channel.id, channel.name,
+            channelDescription: channel.description,
+            icon: android!.smallIcon,
+            priority: Priority.high,
+            importance: Importance.max,
+            styleInformation: BigTextStyleInformation(
+              body, htmlFormatBigText: true,
+              htmlFormatTitle: true,
+              htmlFormatContent: true,
+              //contentTitle: 'overridden <b>big</b> content title',
+              htmlFormatContentTitle: true,
+              //summaryText: 'summary <i>text</i>',
+              htmlFormatSummaryText: true,
+            ),
+            color: ColorName.whiteColor),
+      ),
+      payload: jsonEncode(message.data),
+    );
+    // await AwesomeNotifications().createNotification(
+    //   content: NotificationContent(
+    //     id: id ?? 1000,
+    //     channelKey: "basic_channel",
+    //     title: title,
+    //     body: body,
+    //     payload: payload,
+    //   ),
+    // );
   }
+
+  AndroidNotificationChannel androidNotificationChannel() =>
+      const AndroidNotificationChannel(
+        'high_importance_channel', // id
+        'High Importance Notifications', // title
+        description:
+            'This channel is used for important notifications.', // description
+        importance: Importance.max,
+      );
 }

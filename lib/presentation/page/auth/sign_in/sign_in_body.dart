@@ -1,7 +1,4 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:standart_project/presentation/components/gen/assets.gen.dart';
 import 'package:standart_project/presentation/components/gen/colors.gen.dart';
@@ -12,7 +9,7 @@ import '../../../core/utils/spacing/padding.dart';
 import '../../../core/utils/spacing/sizebox.dart';
 
 class SignInBody extends StatelessWidget {
-  SignInBody({Key? key}) : super(key: key);
+  const SignInBody({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +30,7 @@ class SignInBody extends StatelessWidget {
                     width: double.infinity,
                   ),
                   siboh8,
-                  Text(AppLocalizations.of(context)!.welcome, style: ts24black),
+                  Text(AppLocalizations.of(context).welcome, style: ts24black),
                   siboh16,
                   SignInForm(),
                   siboh32,
